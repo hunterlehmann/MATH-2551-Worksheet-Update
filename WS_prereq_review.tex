@@ -1,0 +1,79 @@
+
+\fancyhead[C]{Review of Prereq Material}
+\fancyhead[R]{\dayone}
+
+\iftoggle{questions}{
+\begin{center}{\large \textbf{Math 2551 Worksheet - Review from Single-Variable Calculus and Linear Algebra}}\\
+\end{center}
+
+This worksheet reviews some concepts and tools of calculation from linear algebra, differential calculus, and integral calculus that will be useful for this course.
+
+\begin{enumerate}
+    \item Let $\mathbf{v}=\langle 1,2,1\rangle$ and $\mathbf{w}=\langle -1,0,2\rangle$.  Compute $2\mathbf{v}$, $\mathbf{v}-\mathbf{w}$, and $\mathbf{v}\cdot\mathbf{w}$.
+    
+    \item Let $a,b,c$ be variables.  Calculate \[\det \begin{bmatrix}
+    	a & b &c \\ 1 & -1 & 2 \\ 4 & 3 & -7
+    \end{bmatrix} \] by expanding the determinant along the first row.\\
+
+	\item Draw the vectors $\bu=2\bi+\bj$ and $\bv=-\bi+2\bj$ starting at the origin in $\R^2$ to show that these vectors are orthogonal.  Compute $\bu\dotp \bv$.  What is the result?
+	
+	\item Let $\bv = \langle 2,-4,\sqrt{5} \rangle$ and $\bu = \langle -2,4,-\sqrt{5} \rangle$. Compute the following:
+	\begin{enumerate}
+		\item $\bv \dotp \bu$
+		
+		\item the cosine of the angle $\theta$ between $\bv$ and $\bu$. Recall that $\bv \cdot \bu = |\bv||\bu| \cos(\theta)$
+		
+		\item $(3\bv) \dotp (2 \bu)$.
+	\end{enumerate}
+
+	\item Compute the following integrals.
+	\begin{multicols}{2}
+		\begin{enumerate}
+			\item $\displaystyle \int_0^\pi (\sin (\theta))^5 \ d\theta$
+			\item $\displaystyle \int_0^\pi (\sin (\theta))^2 \ d\theta$
+			\item $\displaystyle \int_1^2 t \ln (t) \ dt$
+		\end{enumerate}
+	\end{multicols}
+
+	\item Find the maximum value of the function $f(t)=t e^{t^2}$ on the interval from $t=0$ to $t=2$. Justify how you know this is the maximum. \\
+	
+	\item Find the area enclosed by the curves $f(x)=x^2$ and $g(x)=2-x$.
+	
+\end{enumerate}
+}{}
+\iftoggle{answers}{
+\begin{center}{\large \textbf{Math 2551 Worksheet Answers - Review from Single-Variable Calculus and Linear Algebra}}\\
+\end{center}
+
+\begin{enumerate}
+	\item $2\mathbf{v}=\langle 2,4,2\rangle$, $\mathbf{v}-\mathbf{w}=\langle 2,2,-1\rangle$, $\mathbf{v}\dotp\mathbf{w}=1$.
+	
+	\item $a+15b+7c$
+	
+	\item $\bu\dotp \bv=0$ (because the vectors are orthogonal)
+	
+	\item	\begin{enumerate}
+		\item $\bv \dotp \bu = -25$
+		
+		\item $\cos(\theta)=\dfrac{-25}{25}=-1$
+		
+		\item $(3\bv) \dotp (2 \bu)=3(2)(-25)=-150$.
+	\end{enumerate}
+	
+	\item
+	\begin{enumerate}
+		\item $16/15$
+		\item $\dfrac{\pi}{2}$
+		\item $\ln(4)-\dfrac{3}{4}$
+	\end{enumerate}
+	
+	\item $f_{max}=2e^4$, since the function has no critical points and is increasing on this interval.
+	
+	\item $\text{Area} = \dfrac{9}{2}$.
+	
+\end{enumerate}
+}{}
+\iftoggle{solutions}
+{
+Solutions go here in the same format.
+}{}

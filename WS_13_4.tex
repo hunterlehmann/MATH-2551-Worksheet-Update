@@ -1,0 +1,55 @@
+
+\fancyhead[C]{Section 13.4}
+\fancyhead[R]{\daysix}
+
+\iftoggle{questions}{\begin{center}{\large \textbf{Math 2551 Worksheet: Curvature and Normals}}
+\end{center}
+
+\begin{enumerate}	
+	\item Find the unit tangent vector, unit normal vector, and curvature of the curve $\br(t)=\langle \sqrt{2} t, e^t, e^{-t}\rangle$, $t\in\R$.
+	
+	\item Find $\bT, \bN$ and $\kappa$ for the space curve $\br(t)=(\cos(t)+t\sin(t))\bi+(\sin(t)-t\cos(t))\bj+3\bk$ with $t\geq 0$.
+	
+	\item Compute $\bT$ and $\bN$ for the curve $\br(t)=\langle t, (1/3)t^3\rangle, t\in\R$ for $t\neq 0$.  \\
+	
+	Does $\bN$ exist at $t=0$? Graph the curve and explain what is happening to $\bN$ as $t$ passes from negative to positive values.
+	
+	\item Before doing any computations, where do you think that the curvature of the parabola $y=x^2$ is greatest?\\
+	
+	Compute its curvature and find the point with greatest curvature.
+	
+\end{enumerate}
+}{}
+
+\iftoggle{answers}{\begin{center}{\large \textbf{Math 2551 Worksheet Answers: Curvature and Normals}}
+\end{center}
+
+\begin{enumerate}	
+
+\item $\bT(t)=\dfrac{1}{1+e^{2t}}\langle \sqrt{2}e^t,e^{2t}, -1\rangle$
+
+$\bN(t)=\dfrac{1}{1+e^{2t}}\langle 1-e^{2t}, \sqrt{2}e^t, \sqrt{2}e^t\rangle$
+
+$\kappa(t)=\dfrac{\sqrt{2}e^{2t}}{(e^{2t}+1)^2}$
+
+\item $\bT(t)=\cos(t)\bi+\sin(t)\bj$
+
+$\bN(t)=-\sin(t)\bi+\cos(t)\bj$
+
+$\kappa(t)=\dfrac{1}{t}$
+
+\item $\bT=\langle \dfrac{1}{\sqrt{1+t^4}}, \dfrac{t^2}{\sqrt{1+t^4}}\rangle$
+
+$\bN=\langle \dfrac{-t^2}{\sqrt{1+t^4}}, \dfrac{1}{\sqrt{1+t^4}}\rangle$ if $t>0$ and $\langle \dfrac{t^2}{\sqrt{1+t^4}}, \dfrac{-1}{\sqrt{1+t^4}}\rangle$ if $t<0$.
+
+The normal vector does not exist when $t=0$; as $t$ passes from negative to positive values the normal vector changes which side of the curve it is on.
+
+\item The point of greatest curvature occurs at $x=0$. Using the 
+parameterization $\br(t)=\langle t, t^2\rangle$ gives 
+$\kappa(t)=\dfrac{2}{(1+4t^2)^{3/2}}$, which is maximized when $t=0$.
+\end{enumerate}
+}{}
+\iftoggle{solutions}
+{
+Solutions go here in the same format.
+}{}

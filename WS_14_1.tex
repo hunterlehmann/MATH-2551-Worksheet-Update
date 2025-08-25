@@ -1,0 +1,102 @@
+
+\fancyhead[C]{Section 14.1}
+\fancyhead[R]{\dayseven}
+
+\iftoggle{questions}{
+\begin{center}
+	{\large \textbf{Math 2551 Worksheet: Multivariable Functions}}
+\end{center}
+
+\begin{enumerate}	
+	\item Find and sketch the domain for each function.
+	\begin{enumerate}
+		\item $f(x,y)=\sqrt{x-y-1}.$
+		
+		\item $f(x,y) = \sqrt{(x-4)(y^2-1)}.$
+		
+		\item $f(x,y)=\cos^{-1}(y-4x^2)$.
+		
+		\item $f(x,y)= \dfrac{1}{4-x^2-y^2}.$
+		
+		\item $f(x,y)=\dfrac{1}{\ln(4-x^2-y^2)}$
+	\end{enumerate}
+	
+	\item Match the surfaces (a)-(g) with the written descriptions of the level curves (A)-(F).  You may use each description once, multiple times, or not at all.
+	
+	\begin{minipage}[c]{0.3\linewidth}
+		\begin{enumerate}
+			\item $z=2x^2+3y^2$
+			\item $z=x^2+y^2$
+			\item $z=\dfrac{1}{x-1}$
+			\item $z=2x+3y$
+			\item $z=\sqrt{25-x^2-y^2}$
+			\item $z=\sqrt{x^2+y^2}$
+			\item $z=xy$.
+		\end{enumerate}
+	\end{minipage} % no space if you would like to put them side by side
+	\begin{minipage}[c]{0.7\linewidth}
+		\begin{enumerate}[label=(\Alph*)]
+			\item a collection of unequally spaced concentric circles
+			\item a collection of unequally spaced parallel lines
+			\item a collection of equally spaced concentric circles
+			\item two straight lines and a collection of hyperbolas
+			\item a collection of concentric ellipses
+			\item a collection of equally spaced parallel lines
+		\end{enumerate}
+	\end{minipage}
+	
+	\item Find an equation for the level curve of the function $F(x,y)=\dfrac{2y-x}{x+y+1}$ passing through $(-1,1)$.
+	
+	\item Find the equation for the level surface of the function $f(x,y,z)=\sqrt{x^2+y^2+z^2}$ passing through $(1,1,1)$. 
+	
+	\item Let $f(x,y) = (x-y)^2$. Determine the equations and shapes of the cross-sections when $x = 0$, $y = 0$, and $x = y,$ and describe the level curves. Use this information to produce a sketch of the graph of the surface.  Confirm your sketch using a 3d graphing utility.
+\end{enumerate}
+}{}
+
+\iftoggle{answers}{
+\begin{center}
+	{\large \textbf{Math 2551 Worksheet Answers: Multivariable Functions}}
+\end{center}
+
+\begin{enumerate}	
+	\item Find and sketch the domain for each function.
+	\begin{enumerate}
+		\item $\{ (x,y)\mid x-y\geq 1 \}$
+		
+		\item $\{ (x,y) \mid x\geq 4, |y|\geq 1 \} \cup \{(x,y) \mid x<4, |y|<1 \}$
+		
+		\item $\{ (x,y) \mid 4x^2-1\leq y\leq 4x^2+1 \}$
+		
+		\item All of $\R^2$ except the circle $x^2+y^2=4$
+		
+		\item All of the disk $x^2+y^2< 4$ except the circle $x^2+y^2=3$.
+	\end{enumerate}
+	
+	\item	
+	\begin{enumerate}
+		\item  a collection of concentric ellipses
+		\item a collection of unequally spaced concentric circles
+		\item a collection of unequally spaced parallel lines
+		\item a collection of equally spaced parallel lines
+		\item a collection of unequally spaced concentric circles
+		\item a collection of equally spaced concentric circles
+		\item two straight lines and a collection of hyperbolas
+	\end{enumerate}
+	
+	\item The plane $4x+y+3=0$, except for those points with $x+y=-1$.
+	
+	\item The sphere $3=x^2+y^2+z^2$
+	
+	\item When $x=0$, the cross-section is the parabola $z=y^2$. 
+	
+	When $y=0$, the cross-section is the parabola $z=x^2$.
+	
+	When $x=y$, the cross-section is the line $z=0$.
+	
+	The level curves are pairs of parallel lines $y=x\pm\sqrt{k}$.
+\end{enumerate}
+}{}
+\iftoggle{solutions}
+{
+Solutions go here in the same format.
+}{}

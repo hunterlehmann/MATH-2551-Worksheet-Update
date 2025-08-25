@@ -1,0 +1,81 @@
+
+\fancyhead[C]{Sections 12.1-6, 13.1-4, 14.1-2}
+\fancyhead[R]{\dayeight}
+	
+\iftoggle{questions}{\begin{center}{\large \textbf{Math 2551 Worksheet 8 - Review for Exam 1}}
+\end{center}
+
+
+\begin{enumerate}	
+	\item Set up the integral to find the arc length of the curve $y=e^x$ from the point $(0,1)$ to the point $(1,e)$.  Focus on finding a parameterization, and on what values of $t$ give these two points.  Is this an integral you would want to compute? Why or why not?
+	
+	\item Parameterize the line tangent to the curve 
+	\[ \br(t)=\langle \cos^2(t),\sin(t)\cos(t),\cos(t)\rangle \]
+	at the point where $t=\pi/2$.
+	
+	\item Compute the unit tangent vector $\bT(t)$ and the unit normal vector $\bN(t)$ to the circle 
+	\[\br(t)=\langle 2\cos(t),2\sin(t)\rangle. \]
+	Before checking, should the normal vector be pointing into or out of the circle? Why?
+	
+	\item We have seen that the curvature of a circle with radius $a$ is $1/a$.  Thinking about the geometry of a helix with radius $a$, do you think its curvature will be greater than or less than $1/a$?  Why?  Compute the curvature using the parameterization 
+	\[\br(t)=\langle a\cos(t), t, a\sin(t) \rangle \]
+	to confirm or challenge your intuition.
+	
+	\item The function $\mathbf{\ell}(t)$ below describes a line.  There is a particular plane that $\mathbf{\ell}(t)$ is normal to at the point $t=0$.  Find an equation of this plane.
+	\[\mathbf{\ell}(t)=\langle 3-3t,2+t,-2t\rangle. \]
+	
+	Where does this line intersect the different plane $3x-y+2z=-7$?
+	
+	\item Find and sketch the domain of each of the following functions of two variables:
+	\begin{enumerate}
+		\item $\sqrt{9-x^2}+\sqrt{y^2-4}$
+		\item $\arcsin(x^2+y^2-2)$
+		\item $\sqrt{16-x^2-4y^2}$
+	\end{enumerate}
+
+	\item Solve the differential equation below, together with its given initial conditions.  Remember that this means finding all functions $\br(t)$ which satisfy the given equations.
+	
+		\[ \br''(t)=2\bi+6t\bj+\dfrac{1}{2\sqrt{t}}\bk, \quad \br'(1)=2\bi+3\bj+\bk, \quad \br(1)=\bi+\bj \]
+		
+		
+		
+		\item Let $f(x,y)=(x^2-y^2)/(x^2+y^2)$ for $(x,y)\neq (0,0)$. Is it possible to define $f(0,0)$ in a way that makes $f$ continuous at the origin? Why?
+	
+\end{enumerate}
+}
+\iftoggle{answers}{
+
+\begin{center}{\large \textbf{Math 2551 Worksheet 8 Answers - Review for Exam 1}}
+\end{center}
+
+
+\begin{enumerate}	
+	\item $\int_0^1 \sqrt{1+e^{2t}}\ dt$
+	
+	\item $\mathbf{\ell}(s)=\langle 0,-s,-s\rangle$
+	
+	\item $\bT(t)=\langle -\sin(t),\cos(t)\rangle$
+	
+	$\bN(t)=\langle -\cos(t),-\sin(t)\rangle$
+	
+	Into
+	
+	\item $\kappa=\dfrac{a}{1+a^2}$
+	
+	\item $-3(x-3)+(y-2)-2z=0$ \\
+	Intersection point is $(0,3,-2)$, when $t=1$.
+	
+	\item \begin{enumerate}
+		\item $\{(x,y)\mid |x|\leq 3,|y|\geq 2 \}$
+		\item $1\leq x^2+y^2\leq 3$
+		\item $\dfrac{x^2}{16}+\dfrac{y^2}{4}\leq 1$
+	\end{enumerate}
+
+	\item $\br(t)=t^2\bi+t^3\bj+\frac{2}{3}(t^{3/2}-1)\bk$
+	\item No, because the limit of $f$ as $(x,y)\to(0,0)$ does not exist.
+\end{enumerate}
+}{}
+\iftoggle{solutions}
+{
+Solutions go here in the same format.
+}{}

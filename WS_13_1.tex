@@ -1,0 +1,83 @@
+
+\fancyhead[C]{Section 13.1}
+\fancyhead[R]{\dayfour}
+
+\iftoggle{questions}{
+\begin{center}{\large \textbf{Math 2551 Worksheet: Curves in Space and Their Tangents}}
+\end{center}
+
+
+\begin{enumerate}
+
+	\item Describe the graph of the curve $\br(t)=\langle t\cos(t), t\sin(t), t\rangle$, $t\in\R$.\\
+	
+	\item Find a vector-valued function for the curve of intersection of the cylinder $x^2+y^2=9$ and the plane $y+z=2$.
+	
+	\textit{Hint: How could you parameterize the circle $x^2+y^2=9$ in the plane?}\\
+	
+	\item What is the difference between the parameteric curves $\bff(t)=\langle t, t,t^2\rangle, \bg(t)=\langle t^2, t^2, t^4\rangle$, and $\bh(t)=\langle \sin(t),\sin(t),\sin^2(t)\rangle$ as $t$ runs over all real numbers?\\
+	
+	\item With a parametric plot and a set of $t$ values, we can associate a `direction'.  For example, the curve $\langle \cos(t),\sin(t)\rangle$, $t\in[0,2\pi]$ is the unit circle traced counterclockwise.  How can we change a set of given parametric equations and $t$ values to get the same curve, only traced backwards?
+	
+	\item The motion of a particle in the $xy$-plane at time $t$ is described by the vector function
+	\[\br(t)= e^{t}\bi + \frac{2}{9}e^{2t}\bj\]
+	\begin{enumerate}
+		\item Find an equation in $x$ and $y$ whose graph is the path of the particle. Consider how $y(t)$ is related to $x(t)$ and what values $x(t)$ takes on.
+		
+		\item Find the particle's velocity and acceleration vectors at $t=\ln(3).$
+		
+		\item Sketch the path of the particle and include the particle's velocity and acceleration vectors at $t=\ln(3).$
+	\end{enumerate}
+	
+	\item Find the parametric equations for the line that is tangent to the curve \\
+	\[\vect r(t)=\left\langle \ln t, \frac{t-1}{t+2}, t \ln t \right\rangle, \text{ at } t = 1.\]
+	
+	\item Determine the point at which $\bff(t)=\langle t, t^2,t^3\rangle$ and $\bg(t)=\langle \cos(t), \cos(2t), t+1\rangle$ intersect, and find the angle between the curves at that point. (Hint: You'll need to set this up like the line intersection problems you've seen before, writing one in $s$ and one in $t$). 
+	
+	If these two functions were the trajectories of two bumblebees on the same scale of time, would the bees collide at their point of intersection? Explain.
+	
+	\item Find the equation of the plane perpendicular to the curve $\langle \cos(t),\sin(t),\cos(6t)\rangle$ when $t=\pi/4$.
+\end{enumerate}
+}{}
+
+\iftoggle{answers}{
+\fancyhead[R]{\dayfour}
+\begin{center}{\large \textbf{Math 2551 Worksheet Answers: Curves in Space and Their Tangents}}
+\end{center}
+
+
+\begin{enumerate}
+
+	\item This curve's graph is a spiral, narrowing to a point at the origin when $t=0$ and widening outward around the $z$-axis for larger/smaller $t$.\\
+	
+	\item $\br(t)=\langle 3\cos(t), 3\sin(t),2-3\sin(t)\rangle, 0\leq t\leq 2\pi$.\\
+	
+	\item  All three functions describe part of the same set of points in $\R^3$, which lie above the line $y=x$ in the $xy$-plane and form a parabola in the plane $x=y$.  $\bff$ traces out all of the points on this parabola, $\bg$ only those in the first octant, and $\bh$ only those which lie above the square $[-1,1]\times[-1,1]$.\\
+	
+	\item Many possible answers; depending on the domain and functions involved.  If the domain is bounded, e.g. $[a,b]$, then letting $s=b+(a-b)t$ and taking $\br(s)$ as the new parametric equations works. If the domain is $(-\infty,\infty)$, we can just let $s=-t$.
+	
+	
+	\item 
+	\begin{enumerate}
+		\item $y=\dfrac{2}{9}x^2$ for $x>0$
+		
+		\item $\bv(\ln(3))=3\bi+4\bj$
+		
+		$\ba(\ln(3))=3\bi+8\bj$.
+	\end{enumerate}
+	
+	\item $x(s)=s, y(s)=\dfrac{s}{3}, z(s)=s$
+	
+	
+	
+	\item $(1,1,1)$ (where the first parameter is 1 and the second is 0).  The angle is $\arccos(3/\sqrt{14})$.  The bees would not collide, since the first bee reaches the point at $t=1$ and the second bee at $t=0$.
+	
+	\item $-\dfrac{1}{\sqrt{2}}(x-\dfrac{1}{\sqrt{2}})+\dfrac{1}{\sqrt{2}}(y-\dfrac{1}{\sqrt{2}})+6(z-0)=0$
+	
+	OR $x-y-6\sqrt{2}z=0$
+\end{enumerate}
+}{}
+\iftoggle{solutions}
+{
+Solutions go here in the same format.
+}{}

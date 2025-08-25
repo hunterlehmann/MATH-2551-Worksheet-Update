@@ -1,0 +1,49 @@
+\fancyhead[C]{Section 16.5}
+	\fancyhead[R]{\daytwentyfive}
+
+\iftoggle{questions}{
+\begin{center}{\large \textbf{Math 2551 Worksheet: Surfaces}}
+\end{center}
+
+
+\begin{enumerate}
+	
+	\item Consider the surface cut from the parabolic cylinder $y=4-x^2$ by the planes $z=0$, $z=2$, and $y=0$. Sketch $S$ and find a parameterization of $S$.
+	
+	\item Consider the surface left in the hemisphere $x^2+y^2+z^2=4, \ z\geq 0$ after cutting off the lower part between the planes $z=0$ and $z=\sqrt{3}$ from the hemisphere. (In short, $S$ is the surface which is the part of $x^2+y^2+z^2=4$ above $z=\sqrt{3}$). Sketch $S$, parametrize $S$ and find the surface area of $S$. 
+
+	\item The tangent plane at a point $P_0=(f(u_0,v_0),g(u_0,v_0),h(u_0,v_0))$ on a parameterized surface $\br(u,v)=\langle f(u,v), g(u,v) ,h(u,v)\rangle$ is the plane through $P_0$ normal to the vector $\br_u (u_0,v_0)\times\br_v(u_0,v_0)$.\\
+	
+	Use this to find an equation to the tangent plane of the surface parameterized by $\br(r,\theta)=(r\cos(\theta))\bi+(r\sin(\theta))\bj+r\bk, r\geq 0, 0\leq\theta\leq 2\pi$ at the point where $(r,\theta)=(2,\pi/4)$.\\
+	
+	What is a Cartesian equation for this surface?  Sketch it and the tangent plane.
+
+	\item Find the area of the part of the surface $z=xy$ that lies within the cylinder $x^2+y^2=1$. \\
+
+	\item Find the area of the surface cut from the ``nose" of the paraboloid $x=1-y^2-z^2$ by the $yz$-plane.\\
+\end{enumerate}
+}{}
+
+\iftoggle{answers}{
+\begin{center}{\large \textbf{Math 2551 Worksheet Answers: Surfaces}}
+\end{center}
+
+\begin{enumerate}
+	
+	\item One answer: $\br(u,v)=\langle u, 4-u^2, v\rangle$, $-2\leq u\leq 2, 0\leq v\leq 2$. 
+	
+	\item One answer: $\br(\phi,\theta)=\langle 2\sin(\phi)\cos(\theta), 2\sin(\phi)\sin(\theta),2\cos(\phi)\rangle$ with $0\leq \phi \leq \pi/6$ and $0\leq \theta \leq 2\pi$.\\
+	SA: $8\pi \left(1-\frac{\sqrt{3}}{2} \right)$
+	
+	\item The tangent plane is $-\sqrt{2}(x-\sqrt{2})-\sqrt{2}(y-\sqrt{2})+2(z-2)=0$. This is the cone $z=\sqrt{x^2+y^2}$.
+	
+	\item $\dfrac{2}{3}\pi(2^{3/2}-1)$ 
+	
+	\item $\dfrac{\pi}{6}(5^{3/2}-1)$
+\end{enumerate}
+
+}{}
+\iftoggle{solutions}
+{
+Solutions go here in the same format.
+}{}

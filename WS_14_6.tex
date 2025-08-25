@@ -1,0 +1,42 @@
+
+\fancyhead[C]{Section 14.6}
+\fancyhead[R]{\daytwelve}
+
+\iftoggle{questions}{
+\begin{center}{\large \textbf{Math 2551 Worksheet: Linearization and Tangent Planes}}
+\end{center}
+
+\begin{enumerate}
+	\item %14.6 # 30b
+	Find the linearization of $f(x,y)=e^{2y-x}$ at $(1,2)$. 
+	
+	\item Find the linearization of $f(x,y,z)=\tan^{-1}(xyz)$ at $(1,1,0)$.
+	\item Use the linearization to approximate $f(2.95, 7.1)$ for the function $f(x,y)=\sqrt{x^2+y}$, knowing that $f(3,7)=4$.	
+	
+	
+	\item Graph the function $z=x^{1/3}y^{1/3}$.  Examine the graph at $(0,0)$ - does it look like the function can be well-approximated by a tangent plane there?  Based on your conclusion, is this function differentiable at $(0,0)$?
+	
+	\item Find the equation for the plane tangent to the graph of $f(x,y)=\sqrt{y-x}$ when $x=1$ and $y=2$.
+\end{enumerate}
+}{}
+
+\iftoggle{answers}{
+\begin{center}{\large \textbf{Math 2551 Worksheet Answers: Linearization and Tangent Planes, Optimization}}
+\end{center}
+
+\begin{enumerate}
+		\item $L(x,y)=e^3-e^3(x-1)+2e^3(y-2)$
+	\item $L(x,y,z)=z$
+	
+	\item $f(2.95, 7.1)=4-1/40$
+	
+	\item No, there are two different tangent planes.  No, the function is not differentiable.
+	
+	\item $z=1-1/2(x-1)+1/2(y-2)$
+	
+\end{enumerate}
+}{}
+\iftoggle{solutions}
+{
+Solutions go here in the same format.
+}{}

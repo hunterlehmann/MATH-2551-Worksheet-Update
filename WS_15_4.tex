@@ -1,0 +1,78 @@
+\fancyhead[C]{Section 15.4}
+	\fancyhead[R]{\daysixteen}
+\iftoggle{questions}{
+\begin{center}{\large \textbf{Math 2551 Worksheet: Polar Double Integrals}}
+\end{center}
+
+\begin{enumerate}
+
+	\item Evaluate $\displaystyle \iint_D y^2+3x\ dA$ where $D$ is the region in the 3rd quadrant between $x^2+y^2=1$ and $x^2+y^2=9$.
+	
+	\item Change the Cartesian integral
+	\[
+	\int_{0}^{2}\int_{-\sqrt{4-y^2}}^{\sqrt{4-y^2}} e^{-x^2-y^2} \ dx \ dy
+	\]
+	into an equivalent polar integral and evaluate the integral.
+	
+	
+	\item Find the area of the region common to the interiors of the cardioids $r=1+\cos \theta$ and $r=1-\cos \theta$. 
+	
+	\begin{center}
+		\pgfplotsset{width=7cm,compat=1.8}
+		\usepgfplotslibrary{polar}
+		\begin{tikzpicture}
+			\begin{polaraxis}
+				\addplot+[mark=none,domain=0:720,samples=600] 
+				{1+cos(x)}; 
+				\addplot+[mark=none,domain=0:720,samples=600] 
+				{1-cos(x)};
+				\addplot[samples=360, mark=none, fill=black!70!black, opacity=0.5, domain=90:270] {1+cos(x)};
+				\addplot[samples=360, mark=none, fill=black!70!black, opacity=0.5, domain=0:90] {1-cos(x)};
+				\addplot[samples=360, mark=none, fill=black!70!black, opacity=0.5, domain=270:360] {1-cos(x)};
+				% equivalent to (x,{sin(..)cos(..)}), i.e.
+				% the expression is the RADIUS
+			\end{polaraxis}
+		\end{tikzpicture}
+	\end{center}
+	
+	\item Use a double integral to determine the volume of the solid that is inside the cylinder $x^2+y^2=16$, below $z=2x^2+2y^2$, and above the $xy$-plane.
+	
+	\item \textbf{Challenge:} An integral of great importance in statistics is the Gaussian integral $I=\Ds \int_0^\infty e^{-x^2}\ dx$.  The function $f(x)=e^{-x^2}$ has no elementary antiderivative, so this integral was hard to compute with the methods of single-variable calculus.
+	
+	Let $I^2=\Ds \left(\int_0^\infty e^{-x^2}\ dx\right)\left(\int_0^\infty e^{-y^2}\ dy\right)$.
+	
+	\begin{enumerate}
+		\item Express $I^2$ as the limit of a double integral in polar coordinates with an appropriately chosen domain.  (Hint: As $R$ goes to infinity, what happens to a disk of radius $R$ centered at the origin?)
+		
+		\item Evaluate your double interal to compute the value of $I^2$.  Use this to find the value of the original Gaussian integral $I$.
+	\end{enumerate}
+
+	You can find some history of this integral \href{https://www.york.ac.uk/depts/maths/histstat/normal_history.pdf}{here}.
+	
+\end{enumerate}
+}{}
+
+\iftoggle{answers}{
+\begin{center}{\large \textbf{Math 2551 Worksheet Answers: Polar Double Integrals}}
+\end{center}
+
+\begin{enumerate}
+	\item $5\pi-26$
+	
+	\item $\dfrac{\pi}{2}(1-e^{-4}).$
+	
+	\item $\dfrac{3\pi}{2}-4$.
+	
+	\item $256\pi$
+	
+	\item \begin{enumerate}
+		\item $I^2=\Ds \lim_{R\to\infty}\int_0^2\pi\int_0^R e^{-r^2}r\ dr\ d\theta$
+		
+		\item $I^2=\dfrac{\pi}{4}$, so $I=\dfrac{\sqrt{\pi}}{2}$
+	\end{enumerate}
+\end{enumerate}
+}{}
+\iftoggle{solutions}
+{
+Solutions go here in the same format.
+}{}

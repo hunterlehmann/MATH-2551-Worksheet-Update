@@ -1,0 +1,110 @@
+\fancyhead[C]{Sections 12.1-6, 13.1-4, 14.1-8, 15.1-8, 16.1-8}
+	\fancyhead[R]{\daytwentyeight}
+	
+\iftoggle{questions}{
+\begin{center}{\large \textbf{Math 2551 Worksheet: Review for Final}}
+\end{center}
+
+\title{Math 2551 Worksheet: Review for Final}
+
+\begin{enumerate}
+	
+	\item Find the equation of the plane through $(1,-1,3)$ parallel to the plane $3x+y+z=7$.  Is there a unique plane through $(1,-1,3)$ which is perpendicular to the plane $3x+y+z=7$.  Explain why or why not.
+	
+	\item Find the point on the curve \[ \br(t)=(5\sin(t))\bi+(5\cos(t))\bj+12t\bk \] at a distance $26\pi$ units along the curve from the point $(0,5,0)$ in the direction of increasing parameter $t$.
+		
+	\item Find the domain and range of $f(x,y)$ =$\sqrt{x^2-y}$ and identify its level curves.
+	
+	\item Compute $\displaystyle \lim_{(x,y)\to(0,0)} \frac{y}{x^2-y}$ or show this limit does not exist.
+	
+	\item Let $f(x,y,z)=xy+2yz-3xz$.  Find the tangent plane to the surface $f(x,y,z)=1$ at $(1,1,0)$ and the linearization $L(x,y,z)$ at $(1,1,0)$.
+	
+	\item At the point $(1,2)$, the function $f(x,y)$ has a derivative of $2$ in the direction toward $(2,2)$ and a derivative of $-2$ in the direction toward $(1,1)$.  Find $\nabla f(1,2)$ and the derivative of $f$ at $(1,2)$ in the direction toward the point $(4,6)$.	
+	
+	\item Find the value of the derivative of $f(x,y,z)=xy+yz+xz$ with respect to $t$ on the curve $\br(t)=\langle \cos (t), \sin (t), \cos (2t)\rangle$ at $t=1$.
+
+	\item Find the local minima, local maxima, and saddle points of the function $f(x,y)=x^4-8x^2+3y^2-6y$.
+
+	\item Find the extreme values of $f(x,y)=4xy-x^4-y^4+16$ on the triangular region bounded below by the line $y=-2$, above by the line $y=x$, and on the right by the line $x=2$.
+
+	\item Find the extreme values of $f(x,y)=xy$ on the circle $x^2+y^2=1$.
+
+	\item Sketch the region of integration and reverse the order of integration for the integral
+	\[\int_0^{3/2}\int_{-\sqrt{9-4y^2}}^{\sqrt{9-4y^2}}y\ dx\ dy.\]
+	
+	\item Evaluate the integral \[ \int_{-1}^1\int_{-\sqrt{1-y^2}}^{\sqrt{1-y^2}} \frac{2\ dx\ dy}{(1+x^2+y^2)^2} \] by changing to polar coordinates.
+	
+	\pagebreak
+
+	\item Find the centroid of the region bounded by the lines $x=2,y=2$, and the hyperbola $xy=2$ in the $xy$-plane.
+
+	\item Find the volume of the region bounded above by the sphere $x^2+y^2+z^2=2$ and below by the paraboloid $z=x^2+y^2$.
+
+	\item Use the transformation $u=3x+2y, v=x+4y$ to evaluate the integral \[\iint_R (3x^2+14xy+8y^2)\ dx\ dy \] where $R$ is the region in the first quadrant bounded by the lines $y=(-3/2)x+1, y=(-3/2)x+3, y=-(1/4)x,$ and $y=-(1/4)x+1)$.
+	
+	\item Evaluate the integral $\int_C y^2\ dx + x^2\ dy$ where $C$ is the circle $x^2+y^2=4$.
+	
+	\item Find the outward flux of $\bF=2xy\bi+2yz\bj+2xz\bk$ across the boundary of the cube cut from the first octant by the planes $x=1, y=1, z=1$.
+
+	\item Find the work done by $\bF = \dfrac{x\bi+y\bj}{(x^2+y^2)^{3/2}}$ over the plane curve $\br(t)=\langle e^t \cos(t), e^t\sin(t)\rangle$ from the point $(1,0)$ to the point $(e^{2\pi},0)$.
+
+	\item Find the flux of the field $\bF=\langle 2xy+x, xy-y\rangle$ outward across the boundary of the square bounded by $x=0,x=1,y=0,x=1$.
+
+	\item Find the flux of $\bF = xz\bi+yz\bj+\bk$ across the upper cap cut from the sphere $x^2+y^2+z^2=25$ by the plane $z=3$, oriented away from the $xy$-plane.
+\end{enumerate}
+}{}
+
+\iftoggle{answers}{
+\begin{center}{\large \textbf{Math 2551 Worksheet Answers: Review for Final}}
+\end{center}
+
+\begin{enumerate}
+	\item $3x+y+z=5$.  There is not a unique plane  because there is not a unique normal direction perpendicular to $\langle 3,1,1\rangle$.
+	
+	\item $(0,5,24\pi)$
+	
+	\item Domain $\{(x,y)\mid y\leq x^2\}$
+	Range $[0,\infty)$
+	Level curves are the parabolas $y=x^2-c^2$ for all $c\geq 0$.
+	
+	\item The limit does not exist
+	
+	\item Tangent plane: $(x-1)+(y-1)-z=0$
+	Linearization: $L(x,y,z)=1+(x-1)+(y-1)-z$
+	
+	\item $\nabla f(1,2)=\langle 2,2 \rangle$, $Df_{\bu}(1,2)=14/5$
+	
+	\item $-\sin^2(1)-\sin(1)\cos(1)+\cos^2(1)+\cos(1)\cos(2)-2\cos(1)\sin(2)-2\sin(1)\sin(2)$
+	
+	\item $(0,1)$ saddle point, $(2,1), (-2,1)$ local minimum
+	
+	\item min: -32 at $(2,-2)$  max: 18 at $(1,1)$
+	
+	\item min: -1/2 at $(1/\pm\sqrt{2},1/\pm\sqrt{2})$ and max: 1/2 at $(1/\pm\sqrt{2},1/\mp\sqrt{2})$.
+	
+	\item $\Ds \int_{-3}^3 \int_0^{\sqrt{9/4-x^2/4}} y\ dy\ dx$
+	
+	\item $\pi$
+	
+	\item $(\bar{x},\bar{y})=\left(\dfrac{1}{2-\ln(4)},\dfrac{1}{2-\ln(4)}\right)$
+	
+	\item $V=\dfrac{\pi}{6}(8\sqrt{2}-7)$
+	
+	\item $\dfrac{64}{5}$
+	
+	\item $0$
+	
+	\item $3$
+	
+	\item $1-e^{-2\pi}$
+	
+	\item $\dfrac{3}{2}$
+	
+	\item $\dfrac{208\pi}{5}$
+\end{enumerate}
+
+}{}
+\iftoggle{solutions}
+{
+Solutions go here in the same format.
+}{}

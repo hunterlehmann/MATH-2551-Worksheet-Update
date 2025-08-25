@@ -1,0 +1,57 @@
+\fancyhead[C]{Section 16.3}
+	\fancyhead[R]{\daytwentythree}
+	
+\iftoggle{questions}{
+\begin{center}{\large \textbf{Math 2551 Worksheet: Potentials and Conservative Vector Fields}}
+\end{center}
+
+\begin{enumerate}
+	\item Show that the vector field $\bF=12xy\bi+6(x^2+y^2)\bj$ is conservative using the mixed partials test, then find a potential function $f$ such that $\bF=\nabla f$.
+	
+	\item Find a potential function $f$ for 
+	\[
+	\bF(x,y,z) = \vecf{2xy}{+(x^2-z^2)}{-2yz}.
+	\]
+	Evaluate 
+	\[
+	\int_C \bF \dotp d\br
+	\]
+	where $C$ is any path from $(0,0,0)$ to $(1,2,3)$.
+	
+	\item Let $a,b,c,d,e$ be real numbers and
+	\begin{align*}
+		P(x,y,z) &= 3x + 7y + 2z; \\
+		Q(x,y,z) &= ax+by+4z; \\
+		R(x,y,z) &= cx+dy+ez.
+	\end{align*}
+	For which values of the constants $a,b,c,d,e$ is $\bF = \vecf{P}{+Q}{+R}$ a conservative vector field?
+	
+	\item Find a potential function $f$ for \[\bF(x,y,z)=\langle \dfrac{1}{y}, -\dfrac{x}{y^2}, 2z-1\rangle\] and use it to evaluate $\int_C \bF\dotp d\br$ along the curve $C: \br(t)=\langle \sqrt{t}, t+1, t^2\rangle, 0\leq t \leq 1$.
+	
+	\item Compute $\int_C \bF\cdot d\br$ for the vector field $\bF=\left\langle \dfrac{-y}{x^2+y^2},\dfrac{x}{x^2+y^2}\right\rangle$ where the curve C is the unit circle oriented counterclockwise.
+
+\end{enumerate}}{}
+
+\iftoggle{answers}
+{
+	\begin{center}{\large \textbf{Math 2551 Worksheet Answers: Potentials and Conservative Vector Fields}}
+	\end{center}
+	
+	\begin{enumerate}
+		\item $f(x,y)=12x^2y+2y^3$
+		
+		\item $f(x,y,z)= x^2y-z^2y$ and $\displaystyle \int_C\bF \cdot d\br =-16$.
+		
+		\item $7=a, 2=c, 4=d$, no restriction on $b$ or $e$.
+		
+		
+		\item $f(x,y,z)= \dfrac{x}{y}+z^2-z$. \\
+		$\int_C \bF\dotp d\br = 1/2$   
+		
+		\item $2\pi$
+	\end{enumerate}
+}{}
+\iftoggle{solutions}
+{
+Solutions go here in the same format.
+}{}

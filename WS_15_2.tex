@@ -1,0 +1,81 @@
+\fancyhead[C]{Section 15.2}
+	\fancyhead[R]{\dayfifteen}
+	
+\iftoggle{questions}{
+\begin{center}{\large \textbf{Math 2551 Worksheet: Double Integrals on General Regions}}
+\end{center}
+
+\begin{enumerate}
+
+\item Compute the integrated integral
+\[\int_0^\pi \int_0^x x \sin (y)\ dy\ dx. \]
+
+
+\item Decide, without calculation, if each of the integrals below are positive, negative, or zero. Let D be the region inside the unit circle centered at the origin. Let T, B, R, and L denote the regions enclosed by the top half, the bottom half, the right half, and the left half of unit circle, respectively.
+
+\begin{multicols}{2}
+	\begin{enumerate}
+		\item $\iint_B (y^3+y^5)\ dA$
+		\item $\iint_T (y^3+y^5)\ dA$
+		\item $\iint_D (y^3+y^5)\ dA$
+		\item $\iint_L (y^3+y^5)\ dA$
+		\item $\iint_R (y^3+y^5)\ dA$
+	\end{enumerate}
+\end{multicols}
+
+\item Write an iterated integral for $\iint_R 1 \ dA$ over the region $R$ using vertical cross-sections and horizontal cross-sections. 
+\begin{enumerate}
+	\item Bounded by $y=e^{-x}$, $y=1$, and $x=\ln 3$.
+	
+	\item Bounded by $y=x^2$ and $y=x+2$
+\end{enumerate}
+
+	\item Sketch the region of integration, reverse the order of integration, and evaluate the integral.
+	\[\displaystyle \int_0^{\sqrt{\pi}} \int_y ^{\sqrt{\pi}} \cos(x^2) \ dx \ dy.\]
+	\item Sketch the region of integration and evaluate the integral \[ \iint_R xy^2\ dA, \] where $R$ is enclosed by $x=0$ and $x=\sqrt{1-y^2}$.
+	
+	
+	\item Find the volume of the solid bounded by the cylinder $y^2+z^2=4$ and the planes $x=2y$, $x=0$, $z=0$ in the first octant.
+	
+	\item The integral expression below gives the area of a region in the $xy$-plane. Sketch the region, labeling the bounding curves with their equations, and giving the coordinates of points where the curves intersect.  Then find the area of the region.
+	\[ \int_0^2 \int_{x^2-4}^0\ dy\ dx + \int_0^4\int_{0}^{\sqrt{x}}\ dy\ dx \]
+	
+	
+\end{enumerate}
+}{}
+
+\iftoggle{answers}{
+\begin{center}{\large \textbf{Math 2551 Worksheet Answers: Double Integrals on General Regions}}
+\end{center}
+
+\begin{enumerate}
+	
+	\item $2+\frac{1}{2}\pi^2$
+	
+	\item \begin{enumerate}
+		\item Negative
+		\item Positive
+		\item Zero
+		\item Zero
+		\item Zero
+	\end{enumerate}
+	
+	
+	\item \begin{enumerate}
+		\item $\int_0^{\ln(3)} \int_{e^{-x}}^1\ dy\ dx$ and $\int_{1/3}^1 \int_{-\ln(y)}^{\ln(3)}\ dx\ dy$
+		
+		\item $\int_{-1}^2 \int_{x^2}^{x+2} \ dy\ dx$ and $\int_0^1 \int_{-\sqrt{y}}^{\sqrt{y}} \ dx\ dy + \int_1^4 \int_{y-2}^{\sqrt{y}}\ dx\ dy$
+	\end{enumerate}
+	\item $ \int_0^{\sqrt{\pi}} \int_0^{x} \cos(x^2) \ dy \ dx=0$
+	\item $\dfrac{2}{15}$
+	
+	
+	\item $16/3$
+	
+	\item $32/3$	
+\end{enumerate}
+}{}
+\iftoggle{solutions}
+{
+Solutions go here in the same format.
+}{}

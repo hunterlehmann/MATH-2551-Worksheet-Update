@@ -1,0 +1,52 @@
+\fancyhead[C]{Section 15.8}
+	\fancyhead[R]{\daytwenty}
+	
+\iftoggle{questions}{
+\begin{center}{\large \textbf{Math 2551 Worksheet: Change of Variables}}
+\end{center}
+
+\begin{enumerate}
+	
+	\item Find the Jacobian determinant of the transformation $x=e^{-r}\sin(\theta), y=e^r\cos(\theta)$.
+	
+	\item Find the image of the set $S$ which is the disk given by $u^2+v^2\leq 1$ under the transformation\[\bT(u,v)=\begin{bmatrix} au \\ bv\end{bmatrix}\] for some constants $a,b>0$.
+	
+	Give an example integration problem for which this result would be helpful.
+	
+	\item Find equations for a transformation $\bT$ that maps a rectangular region $S$ in the $uv$-plane whose sides are parallel to the $u$- and $v$-axes onto the region $R$ bounded by the hyperbolas $y=1/x, y=3/x$ and the lines $y=x, y=3x$ in the first quadrant.
+	
+	\item Solve the system \[u=2x-3y, v=-x+y \] for $x$ and $y$ in terms of $u$ and $v$.  Then find the value of the Jacobian and find the image of the parallelogram $R$ in the $xy$-plane with boundaries $x=-3, x=0, y=x,$ and $y=x+1$ under this transformation.  Sketch the transformed region in the $uv$-plane.  Use your results to rewrite the integral \[\iint_R 2(x-y)\ dx\ dy \] as an integral in $uv$-coordinates.
+	
+	\item Use a change of variables to compute \[ \iint_R xy\ dA, \] where $R$ is the region in the first quadrant bounded by the lines $y=x$ and $y=3x$ and the hyperbolas $xy=1, xy=3$.  
+	
+	Hint: Think about problem 3 above.	
+	
+	\item Compute $\Ds \iint_R e^{x+y}\ dA$, where $R$ is the region given by the inequality $|x|+|y|\leq 1$.
+\end{enumerate}
+}{}
+
+\iftoggle{answers}
+{
+	\begin{center}{\large \textbf{Math 2551 Worksheet Answers: Change of Variables}}
+	\end{center}
+
+	\begin{enumerate}
+		\item $\sin^2(\theta)-\cos^2(\theta)=-\cos(2\theta)$
+		
+		\item The elliptical region $\dfrac{x^2}{a^2}+\dfrac{y^2}{b^2}\leq 1$.\\
+		
+		Many possible answers: any such should involve an integration problem where the region of integration is an ellipse with major and minor axes parallel to the $x$ and $y$-axes.
+		
+		\item $x=\sqrt{\dfrac{u}{v}}, y=\sqrt{uv}$ maps $[1,3]\times[1,3]$ onto $R$	
+		
+		\item  $\displaystyle\int_0^1 \int_{-3v}^{-3v+3} -2v \ du\ dv $
+		
+		\item $\ln(9)$
+		
+		\item $e+\dfrac{1}{e}$
+	\end{enumerate}
+}{}
+\iftoggle{solutions}
+{
+Solutions go here in the same format.
+}{}

@@ -1,0 +1,67 @@
+
+\fancyhead[C]{Section 13.2}
+\fancyhead[R]{\dayfive}
+
+\iftoggle{questions}{\begin{center}{\large \textbf{Math 2551 Worksheet: Integrals of Vector Valued Functions}}
+\end{center}
+
+\begin{enumerate}
+	
+	
+	
+	
+	\item Suppose that $\br(t)$ satisfies 
+	\[
+	\br''(t)=-\bi-\bj-\bk, \quad t\geq 0, \qquad \br'(0)=5 \bi, \qquad \br(0)=10\bi+10\bj+10\bk
+	\]
+	Find $\br(t)$.
+	
+	\item A baseball is hit when it is $2.5$ ft above the ground. It leaves the bat with an initial velocity of $140$ ft/sec at a launch angle of $30^\circ$. At the instant the ball is hit, an instantaneous gust of wind blows against the ball, adding a component of $-14 \hat{i}$ (ft/sec) to the ball's initial velocity. A $15$ ft high fence lies $400$ ft from the home plate in the direction of the flight. (Note that gravity, g $= 32$ ft/sec$^2$)
+	
+	\begin{enumerate}
+		\item Include an appropriate sketch.
+		
+		\item Find a vector equation for the path of the baseball.
+		
+		\item How high does the baseball go, and when does it reach maximum height?
+		
+		\item Find the range and flight time of the baseball, assuming that the ball is not caught.
+		
+		\item When is the baseball $20$ ft high? How far (ground distance) is the baseball from home plate at that height?
+		
+		\item Has the batter hit a home run? Explain.
+	\end{enumerate}	
+	
+\end{enumerate}
+}{}
+
+\iftoggle{answers}{
+\fancyhead[R]{\dayfive}
+\begin{center}{\large \textbf{Math 2551 Worksheet 5 Answers: Calculus of Vector-Valued Functions}}
+\end{center}
+
+\begin{enumerate}
+	
+	\item $\br(t)=\langle -\dfrac{1}{2}t^2+5t+10,-\dfrac{1}{2}t^2+10,-\dfrac{1}{2}t^2+10\rangle, \quad t\geq 0$.
+	\item A baseball is hit when it is $2.5$ ft above the ground. It leaves the bat with an initial velocity of $140$ ft/sec at a launch angle of $30^\circ$. At the instant the ball is hit, an instantaneous gust of wind blows against the ball, adding a component of $-14 \hat{i}$ (ft/sec) to the ball's initial velocity. A $15$ ft high fence lies $400$ ft from the home plate in the direction of the flight. (Note that gravity, g $= 32$ ft/sec$^2$)
+	
+	\begin{enumerate}
+		\item Sorry, no sketch. :)
+		
+		\item $\vect r(t) = (140\cos 30^\circ-14)t \hat{i}+ (2.5+(140\sin 30^\circ)t-16t^2)\hat{j} = (70\sqrt{3} -  14) t \hat{i} + (2.5+70t-16t^2) \hat{j}$.
+		
+		\item $y_{\text{max}}=\frac{(140 \sin 30^\circ)^2}{64}+2.5=\frac{70^{2}}{64}+2.5 = 79.0625$ ft., which is reached at $t = \frac{140 \sin 30^\circ}{32}=\frac{70}{32}=2.1875$ s.
+		
+		\item For the time, solve $y=2.5+70t-16t^2=0$ for $t$. Using quadratic formula, we have $t=4.41$s. Then, the range at $t=4.41$ is $x(4.41) = (140\cos 30^\circ-14)(4.41)=472.94$ ft. 
+		
+		\item For the time, solve $y=2.5+70t-16t^2=20$ for $t$. Using quadratic formula, we have $t=0.27, \ 4.11$ seconds. Then, the range at those times are $x(0.27) = 29$ ft and $x(4.11)=441$ ft.
+		
+		\item Yes, according to part (d), the ball is still 20 feet above the ground when it is 441 feet from home plate.
+	\end{enumerate}	
+
+\end{enumerate}
+}{}
+\iftoggle{solutions}
+{
+Solutions go here in the same format.
+}{}
