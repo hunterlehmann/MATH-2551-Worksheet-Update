@@ -1,67 +1,87 @@
 
 \fancyhead[C]{Section 13.4}
 \fancyhead[R]{\daysix}
-\iftoggle{questions}
-{\begin{center}{\large \section*{\centering Chapter 13.4: Curvature and Normals}}
-\end{center}
+
+\section*{\centering Chapter 13.4: Curvature and Normals}
+
+\textbf{G3: Geometry of Curves.} I can compute the arc length of a curve in two or three dimensions and apply arc length to solve problems. I can compute normal vectors and curvature for curves in two and three dimensions.  I can interpret these objects geometrically and in applications.
+
+\vspace{-.5cm}
 
 \subsection*{Mechanics}
 \begin{enumerate}	
-	\item Compute the unit tangent vector, unit normal vector, and curvature of the curve $\br(t)=\langle \sqrt{2} t, 1+t, e^t\rangle$ for all $t\in\R$.
 	
-	\item Find $\bT, \bN$ and $\kappa$ for the curve $\br(t)=\cos(2t)\bi-\sin(2t)\bj+6t\bk$, for $t \geq  0$. What do you notice about $\kappa$? Explain (perhaps with a picture) why this happens. 
-    \item Compute $\bN$ for the curve $\br(t)=\langle t, (1/3)t^3\rangle, t\in\R$ for $t\neq 0$.\\
+	\item \question{Find $\bT, \bN$ and $\kappa$ for the curve $\br(t)=\cos(2t)\bi-\sin(2t)\bj+6t\bk$, for $t \geq  0$. What do you notice about $\kappa$? Explain (perhaps with a picture) why this happens. }
+    { %answer
+    $\bT(t)=\dfrac{1}{\sqrt{10}}(-\sin(2t)\bi-\cos(2t)\bj+3\bk)$, 
     
-	Does $\bN$ exist at $t=0$? Graph the curve, along with its normal vectors at the times $t=-1,-0.5,0.5,1$ and explain what is happening to $\bN$ as $t$ passes through $(0,0)$
+    $\bN(t)=-\cos(2t)\bi+\sin(2t)\bj$
+
+    $\kappa(t)=\dfrac{1}{10}$. The curvature is constant.
+    }
+    { %solution
+    }
+
+	\item \question{Compute the unit tangent vector, unit normal vector, and curvature of the curve $\br(t)=\langle \sqrt{2} t, 1+t, e^t\rangle$ for all $t\in\R$.}
+    { %answer
+    $\bT(t) = \dfrac{1}{\sqrt{3 + e^{2t}}}\langle \sqrt{2}, 1, e^t\rangle,$ 
+
+    $\bN(t) = \dfrac{1}{\sqrt{9+3e^{2t}}} \langle -\sqrt{2}e^{t}, -e^{t}, 3 \rangle,$ 
+
+    $\kappa(t) = \dfrac{\sqrt{3}e^t}{(3 + e^{2t})^{3/2}}.$
+    }
+    { %solution
+    }
+	
+    \item \question{Compute $\bN$ for the curve $\br(t)=\langle t, (1/3)t^3\rangle, t\in\R$ for $t\neq 0$.
+    
+	Does $\bN$ exist at $t=0$? Graph the curve, along with its normal vectors at the times $t=-1,-0.5,0.5,1$ and explain what is happening to $\bN$ as $t$ passes through $(0,0)$}
+    { %answer
+        $\bN=\langle \dfrac{-t^2}{\sqrt{1+t^4}}, \dfrac{1}{\sqrt{1+t^4}}\rangle$ if $t>0$ and $\langle \dfrac{t^2}{\sqrt{1+t^4}}, \dfrac{-1}{\sqrt{1+t^4}}\rangle$ if $t<0$.
+
+        The normal vector does not exist when $t=0$; as $t$ passes from negative to positive values the normal vector changes which side of the curve it is on.
+    }
+    { %solution
+    }
 \end{enumerate}
+
+\vspace{-.5cm}
 \subsection*{Applications}
 \begin{enumerate}[resume]
-	\item You are an engineer overseeing the construction of a certain bridge on campus. The blueprint shows that the bridge has a side view profile which looks like the parabola $y=x^2$. Unfortunately, the material that the bridge is supposed to be built with is extremely rigid, and can only support curves with $\kappa \leq 1.5$ units. Can this bridge be safely built with this material? [\textit{Hint: Where is the curvature the greatest?}]
-    \item Imagine that you are an ant travelling along the space curve \begin{equation*}
-        \br_1(t) = (\frac{3}{2}t^2+2t,4t-1,-3t^2+10t)
+	\item \question{You are an engineer overseeing the construction of a certain bridge on campus. The blueprint shows that the bridge has a side view profile which looks like the parabola $y=x^2$. Unfortunately, the material that the bridge is supposed to be built with is extremely rigid, and can only support curves with $\kappa \leq 1.5$ units. Can this bridge be safely built with this material? [\textit{Hint: Where is the curvature the greatest?}]}
+    {It cannot; the greatest curvature is \(\kappa =2\) units.}
+    {The point of greatest curvature occurs at $x=0$. Using the 
+parameterization $\br(t)=\langle t, t^2\rangle$ gives 
+$\kappa(t)=\dfrac{2}{(1+4t^2)^{3/2}}$, which is maximized when $t=0$.}
+	
+    \item \question{Imagine that you are an ant travelling along the space curve \begin{equation*}
+        \br_1(t) = \left(\frac{3}{2}t^2+2t,4t-1,-3t^2+10t\right)
     \end{equation*} 
     while your ant-friend is travelling along a different space curve \begin{equation*}
-        \br_2(t) = (2t^2-3t+10,-\frac{1}{2}t^2+9t,-2t^2)
+        \br_2(t) = \left(2t^2-3t+10,-\frac{1}{2}t^2+9t,-2t^2\right)
     \end{equation*}
-    Assuming you are both looking "forwards" and are on the same scale of time, is there a time $t$ when you are both looking in the same direction? If so, at what time? 
+    Assuming you are both looking ``forwards'' and are on the same scale of time, is there a time $t$ when you are both looking in the same direction? If so, at what time? }
+    { %answer
+        Yes, at $t=5$.
+    }
+    { %solution
+    }
 \end{enumerate}
+
+\vspace{-.5cm}
 \subsection*{Extensions}
 \begin{enumerate}[resume]
-    \item For a smooth curve $\br(t)$, define its \textit{binormal vector} $\mathbf{B}(t)$ at a time $t$ to be $\mathbf{B}(t)=\bT(t)\times \bN(t)$, where the $\times$ is the vector cross product. Compute $\mathbf{B}$ for $\br(t) = (t,3\cos t, 3\sin t)$. 
-	\item Give an example of a parametric curve in $\mathbb{R}^2$ which has $ \bN (t) = \left(\frac{-3}{\sqrt{e^{2t}+9}},\frac{e^t}{\sqrt{e^{2t}+9}}\right)$. You may want to use the fact that $\|(e^t,3)\| =\sqrt{e^{2t}+9}$. [\textit{Hint: First deduce a possible $\bT$, then use the given fact, and integrate.}]
-	
+    \item \question{For a smooth curve $\br(t)$, define its \textit{binormal vector} $\mathbf{B}(t)$ at a time $t$ to be $\mathbf{B}(t)=\bT(t)\times \bN(t)$, where the $\times$ is the vector cross product. Compute $\mathbf{B}$ for $\br(t) = (t,3\cos t, 3\sin t)$. }
+    { %answer
+        $\mathbf{B}(t)=\dfrac{1}{\sqrt{10}} \langle 3, \sin(t), -\cos(t)\rangle$
+    }
+    { %solution
+    }
+    
+	\item \question{Give an example of a parametric curve in $\mathbb{R}^2$ which has $ \bN (t) = \left(\frac{-3}{\sqrt{e^{2t}+9}},\frac{e^t}{\sqrt{e^{2t}+9}}\right)$. You may want to use the fact that $\|(e^t,3)\| =\sqrt{e^{2t}+9}$. [\textit{Hint: First deduce a possible $\bT$, then use the given fact, and integrate.}]}
+	{ %answer
+        $\br(t) = \langle -e^t, -3t\rangle$
+    }
+    { %solution
+    }
 \end{enumerate}
-}{}
-
-\iftoggle{answers}{\begin{center}{\large \textbf{Math 2551 Worksheet Answers: Curvature and Normals}}
-\end{center}
-
-\begin{enumerate}	
-
-\item $\bT(t)=\dfrac{1}{1+e^{2t}}\langle \sqrt{2}e^t,e^{2t}, -1\rangle$
-
-$\bN(t)=\dfrac{1}{1+e^{2t}}\langle 1-e^{2t}, \sqrt{2}e^t, \sqrt{2}e^t\rangle$
-
-$\kappa(t)=\dfrac{\sqrt{2}e^{2t}}{(e^{2t}+1)^2}$
-
-\item $\bT(t)=\cos(t)\bi+\sin(t)\bj$
-
-$\bN(t)=-\sin(t)\bi+\cos(t)\bj$
-
-$\kappa(t)=\dfrac{1}{t}$
-
-\item $\bT=\langle \dfrac{1}{\sqrt{1+t^4}}, \dfrac{t^2}{\sqrt{1+t^4}}\rangle$
-
-$\bN=\langle \dfrac{-t^2}{\sqrt{1+t^4}}, \dfrac{1}{\sqrt{1+t^4}}\rangle$ if $t>0$ and $\langle \dfrac{t^2}{\sqrt{1+t^4}}, \dfrac{-1}{\sqrt{1+t^4}}\rangle$ if $t<0$.
-
-The normal vector does not exist when $t=0$; as $t$ passes from negative to positive values the normal vector changes which side of the curve it is on.
-
-\item The point of greatest curvature occurs at $x=0$. Using the 
-parameterization $\br(t)=\langle t, t^2\rangle$ gives 
-$\kappa(t)=\dfrac{2}{(1+4t^2)^{3/2}}$, which is maximized when $t=0$.
-\end{enumerate}
-}{}
-\iftoggle{solutions}
-{
-Solutions go here in the same format.
-}{}

@@ -1,12 +1,15 @@
 
 \fancyhead[C]{Section 14.1}
 \fancyhead[R]{\dayseven}
-\iftoggle{questions}
-{\begin{center}{\large \section*{\centering Chapter 14.1: Multivariate Functions}}
-\end{center}
+
+\section*{\centering Chapter 14.1: Multivariate Functions}
+
+\textbf{G4: Surfaces.} I can identify standard quadric surfaces including: spheres, ellipsoids, elliptic paraboloids, hyperboloids, cones, and hyperbolic paraboloids. I can match graphs of functions of two variables to their equations and contour plots and determine their domains and ranges.
+
+\vspace{-.5cm}
 \subsection*{Mechanics}
 \begin{enumerate}	
-	\item Algebraically describe the domains of each of the following functions. Then sketch them on (separate) $xy$-planes. 
+	\item \question{Algebraically describe the domains of each of the following functions. Then sketch them on (separate) $xy$-planes. 
 	\begin{enumerate}
 		\item $f(x,y)=\sqrt{x-y-1}.$
 		
@@ -17,37 +20,8 @@
 		\item $f(x,y)= \dfrac{1}{4-x^2-y^2}.$
 		
 		\item $f(x,y)=\dfrac{1}{\ln(4-x^2-y^2)}$
-	\end{enumerate}
-	
-	\item For each of the surfaces (a)-(g), determine if the proposed descriptions of the level curves are correct. If not, give a correct descriptor. \textit{[Note: consider a point as a circle/ellipse of radius 0]}
-		\begin{enumerate}
-			\item $z=2x^2-3y^2$; Level curves are concentric ellipses. 
-			\item $z=x^2+y^2$; Level curves are concentric circles
-			\item $z=\dfrac{1}{x+y}$; Level curves are lines, whenever $x \neq -y$. 
-			\item $z=2x+3y$; Level curves are parallel planes. 
-			\item $z=\sqrt{25-x^2-y^2}$; Level curves are concentric circles, but only if $z> 5$ or $z<-5$
-			\item $z=\sqrt{x^2+y^2}$; Level curves are concentric circles, but only if $z\geq 0$. 
-			\item $z=xy$; Level curves are hyperbolas.
-		\end{enumerate}
-\end{enumerate}
-
-\subsection*{Applications}
-\begin{enumerate}[resume]
-    \item Multivariable functions are often used in economic models to describe how one should price an asset, or how to determine the utility of a product. For example, consider a \textit{utility function} $u(x,y,z)$, where $x,y,z$ represent three independent properties of an object (eg., price, quantity, quality), and $u$ tells you how much you value that item. In this context, what economic significance do the level surfaces $u(x,y,z) = C$ have (assume $C$ is a constant). Give a example of how this phenomenon might manifest in your day-to-day life. 
-\end{enumerate}
-\subsection*{Extensions}
-\begin{enumerate}[resume]
-    \item Find an equation for the level surface of the function $f(x,y,z)=\sqrt{x^2+y^2+z^2}$ passing through $(1,1,1)$. Sketch a plot of this level surface in $\mathbb{R}^3$.
-    \item Let $f(x,y) = (x-y)^2$. Determine the equations and shapes of the cross-sections when $x = 0$, $y = 0$, and $x = y,$ and describe the level curves. Use this information to produce a sketch of the graph of the surface.  Confirm your sketch using a 3d graphing utility.
-\end{enumerate}}{}
-
-\iftoggle{answers}{
-\begin{center}
-	{\large \textbf{Math 2551 Worksheet Answers: Multivariable Functions}}
-\end{center}
-
-\begin{enumerate}	
-	\item Find and sketch the domain for each function.
+	\end{enumerate}}
+	{%answer
 	\begin{enumerate}
 		\item $\{ (x,y)\mid x-y\geq 1 \}$
 		
@@ -59,32 +33,69 @@
 		
 		\item All of the disk $x^2+y^2< 4$ except the circle $x^2+y^2=3$.
 	\end{enumerate}
+	}{ %solution
+
+	}
 	
-	\item	
-	\begin{enumerate}
-		\item  a collection of concentric ellipses
-		\item a collection of unequally spaced concentric circles
-		\item a collection of unequally spaced parallel lines
-		\item a collection of equally spaced parallel lines
-		\item a collection of unequally spaced concentric circles
-		\item a collection of equally spaced concentric circles
-		\item two straight lines and a collection of hyperbolas
-	\end{enumerate}
+	\item \question{For each of the surfaces (a)-(g), determine if the proposed descriptions of the level curves are correct. If not, give a correct descriptor. \textit{[Note: consider a point as a circle/ellipse of radius 0]}
+		\begin{enumerate}
+			\item $z=2x^2-3y^2$; Level curves are concentric ellipses. 
+			\item $z=x^2+y^2$; Level curves are concentric circles
+			\item $z=\dfrac{1}{x+y}$; Level curves are lines, whenever $x \neq -y$. 
+			\item $z=2x+3y$; Level curves are parallel planes. 
+			\item $z=\sqrt{25-x^2-y^2}$; Level curves are concentric circles, but only if $z> 5$ or $z<-5$
+			\item $z=\sqrt{x^2+y^2}$; Level curves are concentric circles, but only if $z\geq 0$. 
+			\item $z=xy$; Level curves are hyperbolas.
+		\end{enumerate}
+		}
+		{%answer
+			\begin{enumerate}
+				\item Not correct; level curves are hyperbolas
+				\item Correct
+				\item Correct
+				\item Not correct; level curves are parallel lines
+				\item Not correct; level curves are concentric circles, but only if $0\leq z \leq 5$.
+				\item Correct
+				\item Correct
+			\end{enumerate}
+		}
+		{%solution
+		}
+\end{enumerate}
+
+\vspace{-.5cm}
+\subsection*{Applications}
+\begin{enumerate}[resume]
+    \item \question{Multivariable functions are often used in economic models to describe how one should price an asset, or how to determine the utility of a product. For example, consider a \textit{utility function} $u(x,y,z)$, where $x,y,z$ represent three independent properties of an object (eg., price, quantity, quality), and $u$ tells you how much you value that item. In this context, what economic significance do the level surfaces $u(x,y,z) = C$ have (assume $C$ is a constant). Give a example of how this phenomenon might manifest in your day-to-day life. 
+	}{%answer
+	The level surfaces tell you all combinations of price, quantity, and quality that you value the amount $C$.
+	}
+	{%solution
+	}
+\end{enumerate}
+
+\vspace{-.5cm}
+\subsection*{Extensions}
+\begin{enumerate}[resume]
+    \item \question{Find an equation for the level surface of the function $f(x,y,z)=\sqrt{x^2+y^2+z^2}$ passing through $(1,1,1)$. Sketch a plot of this level surface in $\mathbb{R}^3$.
+	}
+	{%answer
+	The sphere $3=x^2+y^2+z^2$
+	}
+	{%solution
 	
-	\item The plane $4x+y+3=0$, except for those points with $x+y=-1$.
-	
-	\item The sphere $3=x^2+y^2+z^2$
-	
-	\item When $x=0$, the cross-section is the parabola $z=y^2$. 
+	}
+    
+    \item \question{Let $f(x,y) = (x-y)^2$. Determine the equations and shapes of the cross-sections when $x = 0$, $y = 0$, and $x = y,$ and describe the level curves. Use this information to produce a sketch of the graph of the surface.  Confirm your sketch using a 3d graphing utility.
+	}
+	{When $x=0$, the cross-section is the parabola $z=y^2$. 
 	
 	When $y=0$, the cross-section is the parabola $z=x^2$.
 	
 	When $x=y$, the cross-section is the line $z=0$.
 	
 	The level curves are pairs of parallel lines $y=x\pm\sqrt{k}$.
+	}
+	{%solution
+	}
 \end{enumerate}
-}{}
-\iftoggle{solutions}
-{
-Solutions go here in the same format.
-}{}
