@@ -1,22 +1,34 @@
 
 \fancyhead[C]{Section 13.4}
 \fancyhead[R]{\daysix}
-
-\iftoggle{questions}{\begin{center}{\large \textbf{Math 2551 Worksheet: Curvature and Normals}}
+\iftoggle{questions}
+{\begin{center}{\large \section*{\centering Chapter 13.4: Curvature and Normals}}
 \end{center}
 
+\subsection*{Mechanics}
 \begin{enumerate}	
-	\item Find the unit tangent vector, unit normal vector, and curvature of the curve $\br(t)=\langle \sqrt{2} t, e^t, e^{-t}\rangle$, $t\in\R$.
+	\item Compute the unit tangent vector, unit normal vector, and curvature of the curve $\br(t)=\langle \sqrt{2} t, 1+t, e^t\rangle$ for all $t\in\R$.
 	
-	\item Find $\bT, \bN$ and $\kappa$ for the space curve $\br(t)=(\cos(t)+t\sin(t))\bi+(\sin(t)-t\cos(t))\bj+3\bk$ with $t\geq 0$.
-	
-	\item Compute $\bT$ and $\bN$ for the curve $\br(t)=\langle t, (1/3)t^3\rangle, t\in\R$ for $t\neq 0$.  \\
-	
-	Does $\bN$ exist at $t=0$? Graph the curve and explain what is happening to $\bN$ as $t$ passes from negative to positive values.
-	
-	\item Before doing any computations, where do you think that the curvature of the parabola $y=x^2$ is greatest?\\
-	
-	Compute its curvature and find the point with greatest curvature.
+	\item Find $\bT, \bN$ and $\kappa$ for the curve $\br(t)=\cos(2t)\bi-\sin(2t)\bj+6t\bk$, for $t \geq  0$. What do you notice about $\kappa$? Explain (perhaps with a picture) why this happens. 
+    \item Compute $\bN$ for the curve $\br(t)=\langle t, (1/3)t^3\rangle, t\in\R$ for $t\neq 0$.\\
+    
+	Does $\bN$ exist at $t=0$? Graph the curve, along with its normal vectors at the times $t=-1,-0.5,0.5,1$ and explain what is happening to $\bN$ as $t$ passes through $(0,0)$
+\end{enumerate}
+\subsection*{Applications}
+\begin{enumerate}[resume]
+	\item You are an engineer overseeing the construction of a certain bridge on campus. The blueprint shows that the bridge has a side view profile which looks like the parabola $y=x^2$. Unfortunately, the material that the bridge is supposed to be built with is extremely rigid, and can only support curves with $\kappa \leq 1.5$ units. Can this bridge be safely built with this material? [\textit{Hint: Where is the curvature the greatest?}]
+    \item Imagine that you are an ant travelling along the space curve \begin{equation*}
+        \br_1(t) = (\frac{3}{2}t^2+2t,4t-1,-3t^2+10t)
+    \end{equation*} 
+    while your ant-friend is travelling along a different space curve \begin{equation*}
+        \br_2(t) = (2t^2-3t+10,-\frac{1}{2}t^2+9t,-2t^2)
+    \end{equation*}
+    Assuming you are both looking "forwards" and are on the same scale of time, is there a time $t$ when you are both looking in the same direction? If so, at what time? 
+\end{enumerate}
+\subsection*{Extensions}
+\begin{enumerate}[resume]
+    \item For a smooth curve $\br(t)$, define its \textit{binormal vector} $\mathbf{B}(t)$ at a time $t$ to be $\mathbf{B}(t)=\bT(t)\times \bN(t)$, where the $\times$ is the vector cross product. Compute $\mathbf{B}$ for $\br(t) = (t,3\cos t, 3\sin t)$. 
+	\item Give an example of a parametric curve in $\mathbb{R}^2$ which has $ \bN (t) = \left(\frac{-3}{\sqrt{e^{2t}+9}},\frac{e^t}{\sqrt{e^{2t}+9}}\right)$. You may want to use the fact that $\|(e^t,3)\| =\sqrt{e^{2t}+9}$. [\textit{Hint: First deduce a possible $\bT$, then use the given fact, and integrate.}]
 	
 \end{enumerate}
 }{}

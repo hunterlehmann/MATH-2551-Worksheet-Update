@@ -33,8 +33,15 @@
 \newtoggle{solutions}
 \newtoggle{answers}
 \toggletrue{questions}   %print questions
-%\toggletrue{answers}  %print answers
+% \toggletrue{answers}  %print answers
 %\toggletrue{solutions} %print solutions
+
+\newcommand{\question}[3]{\iftoggle{questions}{#1}{}
+
+\iftoggle{answers}{\textbf{Answer:} #2}{}
+
+\iftoggle{solutions}{\textbf{Solution:} #3}{}}
+
 \begin{document}
 
 \begin{myverbbox}{\verbSection}
@@ -44,6 +51,11 @@
 \begin{center}
      {\large \textbf{stuff}}
 \end{center}
+\end{myverbbox}
+\begin{myverbbox}{\verbQuestion}
+\question{question goes here}
+    {final answer goes here}
+    {solution goes here}
 \end{myverbbox}
 
 Things to work on:
@@ -66,7 +78,13 @@ instead of
 
 \todo[inline]{Add Learning Outcome information to the top of each worksheet as appropriate (starting w/ 12.5).  The Learning Outcomes are listed below the end document here.  Each worksheet should get at the top ``The Learning Outcomes associated with this worksheet are:'' followed by a list of all of the appropriate ones (usually just one or two).}
 
-\include{WS_12_1.tex}
+\todo[inline]{Use new \begin{minipage}{0.2\textwidth}
+    \verbQuestion
+\end{minipage}
+
+format instead of the large blocks}
+
+%\include{WS_12_1.tex}
 % \include{WS_12_1.tex}
 % \include{WS_12_4.tex}
 % \include{WS_12_5.tex}
@@ -74,11 +92,11 @@ instead of
 % \include{WS_13_1.tex}
 % \include{WS_13_2.tex}
 % \include{WS_13_3.tex}
-% \include{WS_13_4.tex}
-% \include{WS_14_1.tex}
-% \include{WS_14_2.tex}
+%\include{WS_13_4.tex}
+ \include{WS_14_1.tex}
+%\include{WS_14_2.tex}
 % \include{WS_exam_1_review.tex}
-% \include{WS_14_3.tex}
+ \include{WS_14_3.tex}
 % \include{WS_14_4.tex}
 % \include{WS_14_5.tex}
 % \include{WS_14_6.tex}
