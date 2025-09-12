@@ -5,27 +5,24 @@
 {\begin{center}{\large \section*{\centering Chapter 14.3: Partial Derivatives}}
 \end{center}
 \subsection*{Mechanics}
-
+\begin{enumerate}
+    \item Find all first and second partial derivatives for $f(x,y)=e^x+x\ln (y).$
+    \item Find $f_x$, $f_y$, $f_z$, and $f_{xzz}$ for the function $f(x,y,z)=x\sin(yz)$.
+ \item Find the total derivative $Df$ at the given point for each function below. Remember that $Df$ is the matrix of (partial) derivatives of the function and if $f$ is a function from $\R^n$ to $\R^m$ then $Df$ is a $m\times n$ matrix.
+	\begin{enumerate}
+		\item $f(x)=2x^3+7$ at $x=2$.
+		\item $\mathbf{f}(t)=\langle 2\cos(t), 2 \sin(t), t\rangle$ at $t=\pi/2$.
+		\item $f(x,y)=\sqrt{y-x}$ at $(x,y)=(1,2)$.
+		\item $f(x,y,z)=e^{2y-x}+z^2+4$ at $(x,y,z)=(1,2,3)$.
+		\item $\mathbf{f}(s,t) = \langle 2s+3t, t-s\rangle$ at $(s,t)=(1,1)$.  
+	
+		\textbf{Note:} The graph of this function is a surface (in this case all of $\R^2$) parameterized by two variables just like the graph of the function in (b) is a curve parameterized by one variable - we'll see these more later!  Another way of thinking about this is that this is a \textit{change of variables} for $\R^2$ between the system of coordinates $(s,t)$ and $(x,y)$.
+	\end{enumerate}
+    
+\end{enumerate}
 \subsection*{Applications}
-\subsection*{Extensions}
-\begin{enumerate}	
-	
-	\item Below is a contour plot for a function $f(x,y)$, with values for some of the contours indicated on the left of the figure.
-	
-	\begin{minipage}{0.6\textwidth}
-		\begin{enumerate}
-			\item Estimate the partial derivative $f_x(-2,-1)$.
-			\item Estimate the partial derivative $f_y(-2,-1)$.
-			\item Locate, if possible, one point $(x,y)$ where\\ $f_x(x,y)=0$.
-			\item Locate, if possible, one point $(x,y)$ where\\ $f_x(x,y)<0$.
-		\end{enumerate}
-	\end{minipage}
-	\begin{minipage}{0.4\textwidth}
-		\includegraphics[scale=0.6]{contour_14_3.png}
-	\end{minipage}
-	
-
-	\item The speed of sound $C$ traveling through ocean water is a function of 
+\begin{enumerate}[resume]
+    \item The speed of sound $C$ traveling through ocean water is a function of 
 	temperature, salinity, and depth.  It may be modeled by the function	
 	\[C(T,S,D)=1450 +4.5T-0.05T^2+0.0003T^3+(1.5-0.01T)(S-35)+0.015D, \]
 	
@@ -38,6 +35,30 @@
 		
 		\item Evaluate each of the three partial derivatives at the point where $T=10, S=35$, and $D=100$.  What does the sign of each partial derivative tell us about the behavior of the function $C$ at the point $(10,35,100)$?
 	\end{enumerate}
+    \pagebreak 
+    
+    \item Recall from last week's worksheet that a utility function is a multivariable function $u(x,y,z)$, where $x,y,z$ represent three independent properties of an object (eg., price, quantity, quality), and $u$ tells you how much you value that item. The \textit{marginal utility functions} are the partial derivatives $u_x,u_y$ and $u_z$. What is the economic interpretation of the marginal utilities? 
+\end{enumerate}
+\subsection*{Extensions}
+\begin{enumerate}[resume]
+	
+	\item Below is a contour plot for a function $f(x,y)$, with values for some of the contours (level curves) indicated on the \textit{left} of the figure.
+	
+	\begin{minipage}{0.6\textwidth}
+		\begin{enumerate}
+			\item Find the sign of the partial derivatives \\
+            $f_x(-2,-1)$ and $f_y(-2,-1)$.
+			\item At the point $(0,-1/2)$, which is larger? $f_x$ or $f_y$?
+			\item Find all $(x,y)$ where $f_x(x,y)=0$.
+			\item Locate, if possible, one point $(x,y)$ where\\ $f_x(x,y)<0$.
+		\end{enumerate}
+	\end{minipage}
+	\begin{minipage}{0.4\textwidth}
+		\includegraphics[scale=0.6]{contour_14_3.png}
+	\end{minipage}
+	
+
+	
 
 %	\item Find $f_x$ and $f_y$ for:
 %	\begin{enumerate}
@@ -47,24 +68,7 @@
 %		
 %		\item $f(x,y) = \cos(xy^2)+\sin(x)$
 %	\end{enumerate}
-	
-	\item Find all the second partial derivatives for $f(x,y)=e^x+x\ln (y).$
-	
-	\item Find $f_x$, $f_y$, $f_z$, and $f_{xzz}$ for the function $f(x,y,z)=x\sin(yz)$.
-	
-	\pagebreak
-	
-	\item Find the total derivative $Df$ at the given point for each function below. Remember that $Df$ is the matrix of (partial) derivatives of the function and if $f$ is a function from $\R^n$ to $\R^m$ then $Df$ is a $m\times n$ matrix.
-	\begin{enumerate}
-		\item $f(x)=2x^3+7$ at $x=2$.
-		\item $\mathbf{f}(t)=\langle 2\cos(t), 2 \sin(t), t\rangle$ at $t=\pi/2$.
-		\item $f(x,y)=\sqrt{y-x}$ at $(x,y)=(1,2)$.
-		\item $f(x,y,z)=e^{2y-x}+z^2+4$ at $(x,y,z)=(1,2,3)$.
-		\item $\mathbf{f}(s,t) = \langle 2s+3t, t-s\rangle$ at $(s,t)=(1,1)$.  
-	
-		\textbf{Note:} The graph of this function is a surface (in this case all of $\R^2$) parameterized by two variables just like the graph of the function in (b) is a curve parameterized by one variable - we'll see these more later!  Another way of thinking about this is that this is a \textit{change of variables} for $\R^2$ between the system of coordinates $(s,t)$ and $(x,y)$.
-	\end{enumerate}
-	
+
 	\item The fifth-order partial derivative $\partial^5f/\partial x^2\partial y^3$ is zero for each of the following functions.  To show this as quickly as possible, which variable would you differentiate with respect to first: $x$ or $y$?
 	
 	Try to answer without writing anything down.  Why did you make the choice you did?
@@ -78,6 +82,7 @@
 		
 		\item $f(x,y)=xe^{y^/2}$
 	\end{enumerate}
+    \item Let $A$ be any $2\times 2$ matrix, and let $\mathbf{f}: \mathbb{R}^2\to\mathbb{R}^2$ be given by $\mathbf{f}(\mathbf{x}) = A\mathbf{x}$. Compute the total derivative $D\mathbf{f}$. What do you notice? What familiar family of functions from Calc 1 does this remind you of? Can you generalize this result? 
 \end{enumerate}
 }{}
 
