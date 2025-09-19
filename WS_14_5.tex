@@ -2,11 +2,35 @@
 \fancyhead[C]{Section 14.5}
 \fancyhead[R]{\dayeleven}
 
-\iftoggle{questions}{
-\begin{center}{\large \textbf{Math 2551 Worksheet: Gradient and Directional Derivatives}}
-\end{center}
-
+\section*{\centering Chapter 14.5: Gradients and Directional Derivatives}
+\subsection*{Mechanics}
 \begin{enumerate}
+    \item Compute the gradients of each of the following: 
+    \begin{enumerate}
+        \item $f(x,y)=x^2y$
+        \item $f(x,y,z)=x\sin y+z\cos x$
+        \item $f(x,y,z,w)=x^2+y^2+z^2+w^2$
+    \end{enumerate}
+    \item Find the derivative of $g(x,y)= \dfrac{x-y}{xy+2}$ at $(1,-1)$ in the direction of $\langle 12, 5\rangle$
+    \item Let $f(x,y)=xy$.  Sketch the curve $f(x,y)= -4$ together with $\nabla f(2,-2)$ and the tangent line at $(2,-2)$. Then, find an equation for the tangent line. What do you notice?
+\end{enumerate}
+\subsection*{Applications}
+\begin{enumerate}[resume]
+    \item Gradients form the basis for "learning" in machine learning through a process called \textit{gradient descent}. Here is a setup and overview of the thematic ideas: we are interested in minimizing a (differentiable) error function $\mathcal{L}(x,y,z)$ [\textit{eg., $\mathcal{L}$ might represent the difference between a predicted quantity vs. the true value}]. Though we are able to plug in points, the function $\mathcal{L}$ may be difficult to write down, thus we cannot do "regular calculus" (eg., first derivative test) with it. \\\\
+    Gradients give us a workaround to approximate a local minimum as follows: start by randomly choosing point $(x_0,y_0,z_0)$. Calculate the gradient at this point, and then take a small step in the direction of $-\nabla \mathcal{L}$ [why?] to arrive at a new point $(x_1,y_1,z_1)$. Next, repeat this process with successively smaller step sizes. It turns out that if we choose our initial point and step sizes cleverly, we are (sometimes) able to get closer and closer to a local minimum, without having much knowledge of the function $\mathcal{L}$! Can you anticipate some shortcomings of this algorithm? 
+    \item Suppose you are climbing a hill whose shape is given by the equation
+	\[ z = 1000 - 0.005x^2-0.01y^2, \]
+	where $x, y,$ and $z$ are measured in meters, and you are standing at a point with
+	coordinates $(60, 40, 966)$. The positive $x$-axis points east and the positive $y$-axis
+	points north.
+	\begin{enumerate}
+		\item If you walk due south, will you start to ascend or descend? At what rate?
+		\item If you walk northwest, will you start to ascend or descend? At what rate?
+		\item In which direction is the slope largest? What is the rate of ascent in that direction?
+	\end{enumerate} 
+\end{enumerate}
+\subsection*{Extensions}
+\begin{enumerate}[resume]
 	\item Use the contour diagram of the differentiable function f given below to decide if
 	the specified directional derivative is positive, negative, or approximately zero.
 	
@@ -22,23 +46,7 @@
 			\item At the point $(0,-2)$ in the direction $\bi - 2\bj$
 		\end{enumerate}
 	\end{minipage}
-	
-	\item Let $f(x,y)=xy$.  Sketch the curve $f(x,y)= -4$ together with $\nabla f(2,-2)$ and the tangent line at $(2,-2)$. Then, find an equation for the tangent line.  What do you notice?
-	
-	
-	\item Find the derivative of $g(x,y)= \dfrac{x-y}{xy+2}$ at $(1,-1)$ in the direction of $\langle 12, 5\rangle$.
 
-	
-	\item Suppose you are climbing a hill whose shape is given by the equation
-	\[ z = 1000 - 0.005x^2-0.01y^2, \]
-	where $x, y,$ and $z$ are measured in meters, and you are standing at a point with
-	coordinates $(60, 40, 966)$. The positive $x$-axis points east and the positive $y$-axis
-	points north.
-	\begin{enumerate}
-		\item If you walk due south, will you start to ascend or descend? At what rate?
-		\item If you walk northwest, will you start to ascend or descend? At what rate?
-		\item In which direction is the slope largest? What is the rate of ascent in that direction?
-	\end{enumerate} 
 	\item Let $f(x,y)=-x^2y+xy^2+xy$ and $P=(2,1)$.
 	\begin{enumerate}
 		\item Find the direction of maximal increase of $f$ at $P$.
@@ -47,7 +55,7 @@
 		\item Find a direction $\bu$ such that $D_{\bu}f(P)=0$ (note this forces $\bu$ to be a unit vector!).
 	\end{enumerate}
 \end{enumerate}
-}{}
+{}
 
 \iftoggle{answers}{
 \begin{center}{\large \textbf{Math 2551 Worksheet Answers:Gradient and Directional Derivatives}}
