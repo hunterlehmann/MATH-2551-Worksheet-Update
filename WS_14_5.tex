@@ -1,24 +1,47 @@
-
 \fancyhead[C]{Section 14.5}
 \fancyhead[R]{\dayeleven}
 
 \section*{\centering Chapter 14.5: Gradients and Directional Derivatives}
 \subsection*{Mechanics}
 \begin{enumerate}
-    \item Compute the gradients of each of the following: 
+    \item \question{Compute the gradients of each of the following: 
     \begin{enumerate}
         \item $f(x,y)=x^2y$
         \item $f(x,y,z)=x\sin y+z\cos x$
         \item $f(x,y,z,w)=x^2+y^2+z^2+w^2$
-    \end{enumerate}
-    \item Find the derivative of $g(x,y)= \dfrac{x-y}{xy+2}$ at $(1,-1)$ in the direction of $\langle 12, 5\rangle$
-    \item Let $f(x,y)=xy$.  Sketch the curve $f(x,y)= -4$ together with $\nabla f(2,-2)$ and the tangent line at $(2,-2)$. Then, find an equation for the tangent line. What do you notice?
+    \end{enumerate}}
+	{ % answer goes here
+	}
+	{ % solution goes here
+	}
+	
+    \item \question{Find the derivative of $g(x,y)= \dfrac{x-y}{xy+2}$ at $(1,-1)$ in the direction of $\langle 12, 5\rangle$}
+	{ % answer goes here
+		$D_{\bu}g(1,-1)=\dfrac{21}{13}$
+	}
+	{ % solution goes here
+	}
+
+    \item \question{Let $f(x,y)=xy$.  Sketch the curve $f(x,y)= -4$ together with $\nabla f(2,-2)$ and the tangent line at $(2,-2)$. Then, find an equation for the tangent line. What do you notice?}
+	{ % answer goes here
+	Tangent line: $-2(x-2)+2(y+2)=0$\\
+		
+	\includegraphics{14_5_sketch_soln.png}
+	}
+	{ % solution goes here
+	}
 \end{enumerate}
+
 \subsection*{Applications}
 \begin{enumerate}[resume]
-    \item Gradients form the basis for "learning" in machine learning through a process called \textit{gradient descent}. Here is a setup and overview of the thematic ideas: we are interested in minimizing a (differentiable) error function $\mathcal{L}(x,y,z)$ [\textit{eg., $\mathcal{L}$ might represent the difference between a predicted quantity vs. the true value}]. Though we are able to plug in points, the function $\mathcal{L}$ may be difficult to write down, thus we cannot do "regular calculus" (eg., first derivative test) with it. \\\\
-    Gradients give us a workaround to approximate a local minimum as follows: start by randomly choosing point $(x_0,y_0,z_0)$. Calculate the gradient at this point, and then take a small step in the direction of $-\nabla \mathcal{L}$ [why?] to arrive at a new point $(x_1,y_1,z_1)$. Next, repeat this process with successively smaller step sizes. It turns out that if we choose our initial point and step sizes cleverly, we are (sometimes) able to get closer and closer to a local minimum, without having much knowledge of the function $\mathcal{L}$! Can you anticipate some shortcomings of this algorithm? 
-    \item Suppose you are climbing a hill whose shape is given by the equation
+    \item \question{Gradients form the basis for "learning" in machine learning through a process called \emph{gradient descent}. Here is a setup and overview of the thematic ideas: we are interested in minimizing a (differentiable) error function $\mathcal{L}(x,y,z)$ (\emph{eg., $\mathcal{L}$ might represent the difference between a predicted quantity vs. the true value}). Though we are able to plug in points, the function $\mathcal{L}$ may be difficult to write down, thus we cannot do "regular calculus" (eg., first derivative test) with it. \\\\
+    Gradients give us a workaround to approximate a local minimum as follows: start by randomly choosing point $(x_0,y_0,z_0)$. Calculate the gradient at this point, and then take a small step in the direction of $-\nabla \mathcal{L}$ [why?] to arrive at a new point $(x_1,y_1,z_1)$. Next, repeat this process with successively smaller step sizes. It turns out that if we choose our initial point and step sizes cleverly, we are (sometimes) able to get closer and closer to a local minimum, without having much knowledge of the function $\mathcal{L}$! Can you anticipate some shortcomings of this algorithm? }
+	{ % answer goes here
+	}
+	{ % solution goes here
+	}
+	
+    \item \question{Suppose you are climbing a hill whose shape is given by the equation
 	\[ z = 1000 - 0.005x^2-0.01y^2, \]
 	where $x, y,$ and $z$ are measured in meters, and you are standing at a point with
 	coordinates $(60, 40, 966)$. The positive $x$-axis points east and the positive $y$-axis
@@ -27,15 +50,25 @@
 		\item If you walk due south, will you start to ascend or descend? At what rate?
 		\item If you walk northwest, will you start to ascend or descend? At what rate?
 		\item In which direction is the slope largest? What is the rate of ascent in that direction?
-	\end{enumerate} 
+	\end{enumerate} }
+	{ % answer goes here
+		\begin{enumerate}
+			\item Ascend at a rate of 0.8 vertical meters per horizontal meter
+			\item Descend at a rate of $\sqrt{2}/10$ vertical meters per horizontal meter
+			\item $\langle -0.6, -0.8\rangle$ is the direction of largest slope with rate of ascent 1 vertical meter per horizontal meter.
+		\end{enumerate}
+	}
+	{ % solution goes here
+	}
 \end{enumerate}
+
 \subsection*{Extensions}
 \begin{enumerate}[resume]
-	\item Use the contour diagram of the differentiable function f given below to decide if
+	\item \question{Use the contour diagram of the differentiable function f given below to decide if
 	the specified directional derivative is positive, negative, or approximately zero.
 	
 	\begin{minipage}{0.3\linewidth}
-		\includegraphics[scale=0.7]{contour_14_5.png}
+		\includegraphics[scale=0.7,alt={contour plot of concentric circles about the origin increasing in value with distance from the origin}]{contour_14_5.png}
 	\end{minipage}
 	\begin{minipage}{0.6\linewidth}	
 		\begin{enumerate}
@@ -44,54 +77,38 @@
 			\item At the point $(-1,1)$ in the direction $\bi +\bj$
 			\item At the point $(-1,1)$ in the direction $-\bi+\bj$
 			\item At the point $(0,-2)$ in the direction $\bi - 2\bj$
-		\end{enumerate}
-	\end{minipage}
-
-	\item Let $f(x,y)=-x^2y+xy^2+xy$ and $P=(2,1)$.
+		\end{enumerate}}
+	{ % answer goes here
 	\begin{enumerate}
-		\item Find the direction of maximal increase of $f$ at $P$.
-		\item What is the maximum rate of change of $f$ at $P$?
-		\item Find the direction of maximal decrease of $f$ at $P$.
-		\item Find a direction $\bu$ such that $D_{\bu}f(P)=0$ (note this forces $\bu$ to be a unit vector!).
-	\end{enumerate}
-\end{enumerate}
-{}
-
-\iftoggle{answers}{
-\begin{center}{\large \textbf{Math 2551 Worksheet Answers:Gradient and Directional Derivatives}}
-\end{center}
-
-\begin{enumerate}
-
-		\item 	\begin{enumerate}
 			\item Negative
 			\item Negative
 			\item Approximately zero
 			\item Positive
 			\item Positive
 		\end{enumerate}
-		\item Tangent line: $-2(x-2)+2(y+2)=0$\\
-		
-	\includegraphics{14_5_sketch_soln.png}
-		
-		\item $D_{\bu}g(1,-1)=\dfrac{21}{13}$
-		
-		\item \begin{enumerate}
-			\item Ascend at a rate of 0.8 vertical meters per horizontal meter
-			\item Descend at a rate of $\sqrt{2}/10$ vertical meters per horizontal meter
-			\item $\langle -0.6, -0.8\rangle$ is the direction of largest slope with rate of ascent 1 vertical meter per horizontal meter.
-		\end{enumerate}
-		\item 
+	}
+	{ % solution goes here
+	}
+	
+	\end{minipage}
+
+	\item \question{
+	Let $f(x,y)=-x^2y+xy^2+xy$ and $P=(2,1)$.
+	\begin{enumerate}
+		\item Find the direction of maximal increase of $f$ at $P$.
+		\item What is the maximum rate of change of $f$ at $P$?
+		\item Find the direction of maximal decrease of $f$ at $P$.
+		\item Find a direction $\bu$ such that $D_{\bu}f(P)=0$ (note this forces $\bu$ to be a unit vector!).
+	\end{enumerate}}
+	{ % answer goes here
 		\begin{enumerate}
 			\item $\langle -1/\sqrt{2},1/\sqrt{2} \rangle$
 			\item $2\sqrt{2}$
 			\item $\langle 1/\sqrt{2},-1/\sqrt{2} \rangle$
 			\item $\langle 1/\sqrt{2},1/\sqrt{2} \rangle$
 		\end{enumerate}
+	}
+	{ % solution goes here
+	}
 \end{enumerate}
 
-}{}
-\iftoggle{solutions}
-{
-Solutions go here in the same format.
-}{}
