@@ -1,22 +1,69 @@
-\fancyhead[C]{Section 15.3}
-	\fancyhead[R]{\dayfifteen}
-\iftoggle{questions}{
-\begin{center}{\large \textbf{Math 2551 Worksheet: Applications of Double Integrals}}
-\end{center}
 
+\fancyhead[C]{Section 15.3}
+\fancyhead[R]{\dayfifteen}
+
+\section*{\centering Chapter 15.3: More Double Integrals}
+\textbf{I1: Double \& Triple Integrals.} I can set up double and triple integrals as iterated integrals over any region. I can sketch regions based on a given iterated integral.
+
+\textbf{I2: Iterated Integrals.} I can compute iterated integrals of two and three variable functions, including applying Fubini's Theorem to change the order of integration of an iterated integral.
+
+\subsection*{Mechanics}
 \begin{enumerate}
-	
-	\item The figure below shows a temperature map of Colorado. Use the data to estimate the average temperature in the state using 4, 16, and 25 subdivisions.  Give both an upper and lower estimate for each number of subdivisions.  Why do we like Colorado for this problem?  What other state(s) or countries might we like?
-	\begin{center}
-		\includegraphics[scale=0.9]{colorado_temp.png}
-	\end{center}
-	
-	\item Which do you think will be larger, the average value of $f(x,y)=xy$ over the square $0\leq x \leq 1, 0\leq y\leq 1$, or the average value of $f$ over the quarter circle $x^2+y^2\leq 1$ in the first quadrant? Calculate them to find out. 
-	
-	\item If $f(x,y)=100(y+1)$ represents the population density in people per square mile of a planar region on Earth, where $x$ and $y$ are measured in miles, find the number of people in the region bounded by the curves $x=y^2$ and $x=2y-y^2$.
+    	\item \question{
+         Consider the function $f(x,y)=xy$. Without performing any computations, do you think the average value of $f$ is larger over the square $0\leq x \leq 1, 0\leq y\leq 1$, or over the quarter circle $x^2+y^2\leq 1$ \textit{in the first quadrant}? Verify your guess by integrating
+        }
+        {% answer here
+        
+        }
+        {% solution here
+        
+        }
+       
+        \item \question{
+        A metal triangular plate with vertices $(0,0)$, $(2,0)$ and $(2,4)$ has temperature equal to $C(x,y) = xe^{xy}$ degrees Celsius. Compute the average temperature of the plate. \textit{[Hint: Choose a favourable order of integration.]}
+        }
+        {% answer here
+        
+        }
+        {% solution here
+        
+        }
+\end{enumerate}
+\subsection*{Applications}
+\begin{enumerate}[resume]
+    \item \question{
+        If $f(x,y)=100(y+1)$ represents the population density in people per square mile of a planar region on Earth, where $x$ and $y$ are measured in miles, find the number of people in the region bounded by the curves $x=y^2$ and $x=2y-y^2$.
+        }
+        {% answer here
+        
+        }
+        {% solution here
+        
+        }
+    \item \question{
+        A rectangular can of Pringles chips may be modelled by the prism $0\leq x \leq 1$, $0\leq y \leq 1$ and $0\leq z\leq 5$. Assuming that the Pringles container is filled up with chips until the surface $z=x^2-y^2+3$, are there more chips or air in the can? \textit{[Note: The Pringles enthusiast may complain that their containers are supposed to be cylinders, not prisms. This nuance will be addressed when we work with polar coordinates.]}
+        }
+        {% answer here
+        
+        }
+        {% solution here
+        
+        }
+\end{enumerate}
+\subsection*{Extensions}
+\begin{enumerate}[resume]
+	\item \question{
+        An organism can be initially described as the solid with base $[0,1]\times [0,1]$ and height $z = e^{x+y}$. Suppose that the base of this organism grows at a rate of $t$ units per second in both the positive $x$ and positive $y$ directions. Compute the rate of change of the volume of the organism at $t=4$ seconds. \textit{[Hint: Set up an integral expression for the volume in terms of $t$, evaluate the integral, then differentiate with respect to $t$.]}
+        }
+        {% answer here
+        
+        }
+        {% solution here
+        
+        }
 	
 \end{enumerate}
-}{}
+{}
 
 \iftoggle{answers}{
 \begin{center}{\large \textbf{Math 2551 Worksheet 16 Answers: Applications, Polar Double Integrals}}

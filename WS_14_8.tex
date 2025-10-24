@@ -1,50 +1,70 @@
 
 \fancyhead[C]{Section 14.8}
-	\fancyhead[R]{\daythirteen}
+\fancyhead[R]{\daythirteen}
 
-\iftoggle{questions}{
-\begin{center}{\large \textbf{Math 2551 Worksheet: Lagrange Multipliers}}
-\end{center}
+\section*{\centering Chapter 14.8: Lagrange Multipliers}
 
+\textbf{D3: Optimization.} I can locate and classify critical points of functions of two variables. I can find absolute maxima and minima on closed bounded sets. I can use the method of Lagrange multipliers to maximize and minimize functions of two or three variables subject to constraints. I can interpret the results of my calculations to solve problems.
 
-\begin{enumerate}
-	
-	%%%%%%%%%%%%%%%
-	\item A rectangular box without a lid is to be made from 12 $m^2$ of cardboard. Find the maximum volume of such a box.  %(2,2,1)
-	
-	\item Find the extreme values of the function $f(x,y)=x^2+2y^2$ on the circle $x^2+y^2=1$.
-	%1, 2
-	
-	\item Find the extreme values of the function $f(x,y,z)=x^2+y^2+z^2$ subject to the constraint $x^4+y^4+z^4=1$.
-	
-	\item The plane $x+y+2z=2$ intersects the paraboloid $z=x^2+y^2$ in an ellipse.  Find the points on this ellipse that are nearest to and farthest from the origin.  Hint: It may be helpful algebraically to work with the square of the distance to the origin.
-	
-	\item Find the maximum volume of a rectangular box that is inscribed in a sphere of radius $r$.
-	
-	
+\subsection*{Mechanics}
+\begin{enumerate}	
+	\item \question{Find the extreme values of the function $f(x,y)=x^2+2y^2$ on the circle $x^2+y^2=1$.}
+	%1, 2}
+    {% answer goes here
+    The extreme values are 1 and 2.
+    }
+    {% solution goes here
+    } 
+    \item \question{Find the extreme values of the function $f(x,y,z)=x^2+y^2+z^2$ subject to the constraint $x^4+y^4+z^4=1$.}
+    {% answer goes here
+    The extreme values are 1 and $\sqrt{3}$.
+    }
+    {% solution goes here
+    } 
+
 \end{enumerate}
-}{}
-
-\iftoggle{answers}{
-\begin{center}{\large \textbf{Math 2551 Worksheet Answers: Lagrange Multipliers}}
-\end{center}
-
-\begin{enumerate}
-	
-	\item $V(2,2,1)=4$ cubic units
-	
-	\item The extreme values are 1 and 2.
-	
-	\item The extreme values are 1 and $\sqrt{3}$.
-	
-	\item The closest point is $(\dfrac{1}{2},\dfrac{1}{2},\dfrac{1}{2})$ and the farthest point is $(-1,-1,2)$.
-	
-	\item $\dfrac{8r^3}{3\sqrt{3}}$
-	
-	
+\subsection*{Applications}
+\begin{enumerate}[resume]
+    \item \question{A rectangular box without a lid is to be made from 12 $m^2$ of cardboard. Find the maximum volume of such a box.}  %(2,2,1)
+    {% answer goes here
+    $V(2,2,1)=4$ cubic units
+    }
+    {% solution goes here
+    } 
+    \item \question{A niche restaurant in midtown Atlanta serves only garlic bread (denoted by $g$) and bunches of kale (denoted by $k$). The cost of producing these goods is given by the function $C(g,k) = 5g^2+2gk+3k^2+10$. Assuming that the total amount of items to be produced is 40, compute the minimal production cost.}
+    {% answer goes here
+    $ C_{min}=\frac{11230}{3} \approx \$3743.33$.
+    }
+    {% solution goes here
+    } 
+    \item \question{The height of a mountain is given by $h(x,y)= 300-(3x^2+4xy+3y^2)$. Compute the height of the lowest point on the mountain within $\sqrt{200}$ units of the origin. Where might this point occur? Are there multiple points where this occurs? \textit{[Hint: First, justify why none of $x,y,\lambda$ can be zero. Then solve for $\lambda$.}]}
+    {% answer goes here
+    The two minimums occur at $(x,y)= (\pm 10,\pm 10)$, where the height is -700 units. Warning: The two other solutions to the Lagrange system are $(x,y)=(\pm 10,\mp 10)$ and they are maximums at height 100.
+    }
+    {A routine check shows that the only critical point is at $(0,0)$, which is not a minimum by the second derivative test. Therefore, we check on the boundary $x^2+y^2 = 200$. The Lagrange system looks like 
+    \begin{align*}
+        -6x-4y &= 2\lambda x\\
+        -4x-6y &= 2\lambda y\\
+        x^2+y^2 &= 200
+    \end{align*}
+    Note that if either $x,y$ or $\lambda$ is zero, at least one of the three equations will be violated, hence we are free to divide at leisure. Solving for $\lambda$ in two different ways and equating gives us $x/y = y/x$. Plugging into the constraint equation yields that $x=\pm 10$ and $y=\pm 10$. A routine check distinguishes two of these as maximums and two as minimums.  
+    } 
 \end{enumerate}
-}{}
-\iftoggle{solutions}
-{
-Solutions go here in the same format.
-}{}
+\subsection*{Extensions}
+\begin{enumerate}[resume]
+    \item \question{The plane $x+y+2z=2$ intersects the paraboloid $z=x^2+y^2$ in an ellipse.  Find the points on this ellipse that are nearest to and farthest from the origin. \textit{[Hint: It may be helpful algebraically to work with the square of the distance to the origin.]}}
+    {% answer goes here
+    The closest point is $(\dfrac{1}{2},\dfrac{1}{2},\dfrac{1}{2})$ and the farthest point is $(-1,-1,2)$.
+    }
+    {% solution goes here
+    } 
+
+	
+	\item \question{Find the maximum volume of a rectangular box that is inscribed in a sphere of radius $r$.}
+    {% answer goes here
+    $\dfrac{8r^3}{3\sqrt{3}}$
+    }
+    {% solution goes here
+    } 
+    
+\end{enumerate}

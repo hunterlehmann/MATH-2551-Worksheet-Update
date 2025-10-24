@@ -1,48 +1,57 @@
+
 \fancyhead[C]{Section 15.2}
-	\fancyhead[R]{\dayfifteen}
-	
-\iftoggle{questions}{
-\begin{center}{\large \textbf{Math 2551 Worksheet: Double Integrals on General Regions}}
-\end{center}
+\fancyhead[R]{\dayfifteen}
 
+\section*{\centering Chapter 15.2: General Double Integrals}
+\textbf{I1: Double \& Triple Integrals.} I can set up double and triple integrals as iterated integrals over any region. I can sketch regions based on a given iterated integral.\\\\
+\textbf{I2: Iterated Integrals.} I can compute iterated integrals of two and three variable functions, including applying Fubini's Theorem to change the order of integration of an iterated integral.
+
+\subsection*{Mechanics}
 \begin{enumerate}
-
-\item Compute the integrated integral
-\[\int_0^\pi \int_0^x x \sin (y)\ dy\ dx. \]
-
-
-\item Decide, without calculation, if each of the integrals below are positive, negative, or zero. Let D be the region inside the unit circle centered at the origin. Let T, B, R, and L denote the regions enclosed by the top half, the bottom half, the right half, and the left half of unit circle, respectively.
-
-\begin{multicols}{2}
+ 
+    \item \question{Write iterated integrals for $\iint_R 1 \ dA$ over the regions $R$ in both orders $dxdy$ and $dydx$.
+\begin{enumerate}
+	\item $R$ bounded by $y=e^{-x}$, $y=1$, and $x=\ln 3$.
+	
+	\item $R$ bounded by $y=x^2$ and $y=x+2$
+    \end{enumerate}}{% answer goes here
+    }
+    {% solution goes here
+    }
+\item \question{Evaluate each of the following by sketching the region of integration and deciding on the best order of integration. Why did you choose the order that you did? 
 	\begin{enumerate}
-		\item $\iint_B (y^3+y^5)\ dA$
-		\item $\iint_T (y^3+y^5)\ dA$
-		\item $\iint_D (y^3+y^5)\ dA$
-		\item $\iint_L (y^3+y^5)\ dA$
-		\item $\iint_R (y^3+y^5)\ dA$
-	\end{enumerate}
-\end{multicols}
-
-\item Write an iterated integral for $\iint_R 1 \ dA$ over the region $R$ using vertical cross-sections and horizontal cross-sections. 
-\begin{enumerate}
-	\item Bounded by $y=e^{-x}$, $y=1$, and $x=\ln 3$.
-	
-	\item Bounded by $y=x^2$ and $y=x+2$
+	    \item \[
+	        \int_0^{\sqrt{\pi}} \int_y ^{\sqrt{\pi}} \cos(x^2) \ dx \ dy
+	    \]
+        \item \[
+           \int_0^\pi \int_0^x x \sin (y)\ dy\ dx 
+        \]
+        \item 
+        \[
+            \iint_R xy^2\ dA
+        \]
+        where $R$ is the region bounded by $x=0$ and $x=\sqrt{1-y^2}$
+	\end{enumerate}}{% answer goes here
+    }
+    {% solution goes here
+    }
 \end{enumerate}
 
-	\item Sketch the region of integration, reverse the order of integration, and evaluate the integral.
-	\[\displaystyle \int_0^{\sqrt{\pi}} \int_y ^{\sqrt{\pi}} \cos(x^2) \ dx \ dy.\]
-	\item Sketch the region of integration and evaluate the integral \[ \iint_R xy^2\ dA, \] where $R$ is enclosed by $x=0$ and $x=\sqrt{1-y^2}$.
-	
-	
-	\item Find the volume of the solid bounded by the cylinder $y^2+z^2=4$ and the planes $x=2y$, $x=0$, $z=0$ in the first octant.
-	
-	\item The integral expression below gives the area of a region in the $xy$-plane. Sketch the region, labeling the bounding curves with their equations, and giving the coordinates of points where the curves intersect.  Then find the area of the region.
-	\[ \int_0^2 \int_{x^2-4}^0\ dy\ dx + \int_0^4\int_{0}^{\sqrt{x}}\ dy\ dx \]
-	
-	
+\subsection*{Applications}
+\begin{enumerate}[resume]
+    \item \question{Find the mass of a triangular plate with vertices $(0, 0), (4, 0)$ and $(0, 1)$, given that its density at any point is $\rho(x,y)= x^2+y^2$}{% answer goes here
+    }
+    {% solution goes here
+    }
 \end{enumerate}
-}{}
+\subsection*{Extensions}
+\begin{enumerate}[resume]
+	\item \question{Find the volume of the solid bounded by the cylinder $y^2+z^2=4$ and the planes $x=2y$, $x=0$, $z=0$ in the first octant.}{% answer goes here
+    }
+    {% solution goes here
+    }
+\end{enumerate}
+{}
 
 \iftoggle{answers}{
 \begin{center}{\large \textbf{Math 2551 Worksheet Answers: Double Integrals on General Regions}}

@@ -1,0 +1,120 @@
+\fancyhead[C]{Section 14.7}
+\fancyhead[R]{\daytwelve/\daythirteen}
+
+\section*{\centering Chapter 14.7: Optimization}
+
+\textbf{D3: Optimization.} I can locate and classify critical points of functions of two variables. I can find absolute maxima and minima on closed bounded sets. I can use the method of Lagrange multipliers to maximize and minimize functions of two or three variables subject to constraints. I can interpret the results of my calculations to solve problems.
+
+\subsection*{Mechanics}
+\begin{enumerate}	
+	\item \question{Find and classify all critical points for the function $x^3+3xy+y^3$.}
+    {% answer goes here
+        Saddle point at $(0,0)$ and local minimum at $(0,-2)$.
+    }
+    {% solution goes here
+    } 
+    \item \question{Find all the local maxima, local minima, and saddle points of $f(x,y) = e^y(x^2-y^2)$. }
+    {% answer goes here
+        Saddle point at $(0,0)$ and local maximum at $(-1,-1)$.
+    }
+    {% solution goes here
+    } 
+    \item \question{Find the absolute maxima and minima of the function $f(x,y)=x^2-xy+y^2+1$ on the closed triangular plate bounded by lines $x=0$, $y=4$, $y=x$ in the first quadrant.}
+    {% answer goes here
+        The absolute maximum is $17$, achieved at $(0,4)$ and $(4,4)$, and the absolute minimum is $1$, achieved at $(0,0)$.
+    }
+    {% solution goes here
+    } 
+    \item \question{Give an example of a differentiable function $f(x,y)$ with no critical points.}
+    {% answer goes here
+        Many possible examples, e.g. any linear function $f(x,y)=ax+by+c$.
+    }
+    {% solution goes here
+    } 
+\end{enumerate}
+\subsection*{Applications}
+\begin{enumerate}[resume]
+\item \question{A terrible recipe for lemonade calls for you to just mix lemon juice, denoted by $\ell$, and
+water, denoted by $w$ (units in tonnes). Suppose that given a pair $(\ell,w)$, you are able to
+make $f(\ell,w) = \ell^2-\ell w + w$ liters of lemonade. Given that have only 2 tonnes of lemon juice and 3 tonnes of water, what is the maximum amount of (a very acidic) lemonade
+can you make? How much of each ingredient is used?}
+    { $f_{max} = 4$ is the unique maximum attained at $(\ell,w) = (2,0)$. This means that the lemonade is pure lemon juice :)
+    }
+    {% solution goes here
+    } 
+\item \question{
+In an alternate universe, Atlanta is famous for her extravagant beaches and pristine waters. In this universe, it is known that Atlanta's waters are extremely wavy, and the height of the water (relative to ground level) may be modeled by the function $h(x,y)=\sin(x)\cos(y)$, for $x\in (0,2\pi)$ and $y\in (0,2\pi)$. Visualize this using a 3D graphing software, and compute the height of the highest tides as well as the depth of the lowest troughs. At which coordinates $(x,y)$ do these tides and troughs occur?
+}
+    {% answer goes here
+    Highest tides are at $1$ occurring at $(3\pi/2,\pi)$, lowest troughs at $-1$ occurring at $(\pi/2,\pi)$.
+    }
+    {% solution goes here
+    }
+    \item \question{Let us interpret local maxima as peaks of mountains, local minima as valleys and saddle points as passes between mountain peaks. Consider the statement: ``It is impossible to have two mountain peaks without some sort of valley or pass connecting them. Therefore, if a function has two local maxima, there must also be a saddle point or a local minimum." Do you agree with this? Verify your answer by using software to graph the function $f(x,y)=4x^2e^y-2x^4-e^4y$.} 
+	{% answer goes here
+    The statement is false! The function given has precisely two local maximums and no other critical points. 
+    }
+    {% solution goes here
+    } 
+\end{enumerate}
+\subsection*{Extensions}
+\begin{enumerate}[resume]	
+	\item \question{Can you conclude anything about $f(a, b)$, if $f$ and its first and second partial derivatives are continuous around the critical point $(a, b)$ and $f_{xx}(a,b)$ and $f_{yy}(a,b)$ have opposite signs? 
+    Justify your answer.}
+    {% answer goes here
+        Yes, this must be a saddle point because $f_{xx}(a,b)f_{yy}(a,b)<0$ so $\det(Hf)=f_{xx}(a,b)f_{yy}(a,b)-f_{xy}^2(a,b)<0$.
+    }
+    {% solution goes here
+        Yes, this must be a saddle point because $f_{xx}(a,b)f_{yy}(a,b)<0$ so $\det(Hf)=f_{xx}(a,b)f_{yy}(a,b)-f_{xy}^2(a,b)<0$.
+    } 
+    
+	\item \question{In each case, the origin is a critical point of $f$ and $f_{xx}f_{yy}-(f_{xy})^2 = 0$ at the origin, so the Second Derivative Test fails at the origin.  
+    Use some other method to determine whether the function $f$ has a maximum, a minimum, or neither at the origin.
+	\begin{enumerate}
+		\item $f(x,y)= x^2y^2$
+		\item $f(x,y)= 1-x^2y^2$
+		\item $f(x,y)= xy^2$
+		\item $f(x,y)= x^3y^2$
+		\item $f(x,y)= x^3y^3$
+		\item $f(x,y)= x^4y^4$
+	\end{enumerate}}
+    {% answer goes here
+    \begin{enumerate}
+		\item Minimum is $0$ at $(0,0)$ since $f(x,y)>0$ for all other $(x,y)$.
+		
+		\item Maximum is $1$ at $(0,0)$ since $f(x,y)<1$ for all other $(x,y)$.
+		
+		\item Neither since $f(x,y)<0$ for $x<0$ and $f(x,y)>0$ for $x>0$.
+		
+		\item Neither since $f(x,y)<0$ for $x<0$ and $f(x,y)>0$ for $x>0$.
+		
+		\item Neither since $f(x,y)<0$ for $x<0$ and $y>0$, but $f(x,y)>0$ for $x>0$ and $y>0$.
+		
+		\item Minimum is $0$ at $(0,0)$ since $f(x,y)>0$ for all other $(x,y)$.
+	\end{enumerate}
+    }
+    {% solution goes here
+    \begin{enumerate}
+		\item Minimum is $0$ at $(0,0)$ since $f(x,y)>0$ for all other $(x,y)$.
+		
+		\item Maximum is $1$ at $(0,0)$ since $f(x,y)<1$ for all other $(x,y)$.
+		
+		\item Neither since $f(x,y)<0$ for $x<0$ and $f(x,y)>0$ for $x>0$.
+		
+		\item Neither since $f(x,y)<0$ for $x<0$ and $f(x,y)>0$ for $x>0$.
+		
+		\item Neither since $f(x,y)<0$ for $x<0$ and $y>0$, but $f(x,y)>0$ for $x>0$ and $y>0$.
+		
+		\item Minimum is $0$ at $(0,0)$ since $f(x,y)>0$ for all other $(x,y)$.
+	\end{enumerate}
+    } 
+    \item \question{Among all rectangular boxes of volume $27$ cm$^3$, what are the dimensions of the box with the smallest surface area?  
+    What is the smallest possible surface area? (you may assume this occurs at a local min of the surface area function)}
+    {% answer goes here
+        The dimensions are $3 \times 3 \times 3$ and the surface area is $54$.
+    }
+    {% solution goes here
+    } 
+    
+	
+\end{enumerate}

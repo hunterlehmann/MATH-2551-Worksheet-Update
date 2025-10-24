@@ -1,42 +1,67 @@
-
 \fancyhead[C]{Section 14.6}
 \fancyhead[R]{\daytwelve}
 
-\iftoggle{questions}{
-\begin{center}{\large \textbf{Math 2551 Worksheet: Linearization and Tangent Planes}}
-\end{center}
+\section*{\centering Chapter 14.6: Linearization and Tangent Planes}
 
-\begin{enumerate}
-	\item %14.6 # 30b
-	Find the linearization of $f(x,y)=e^{2y-x}$ at $(1,2)$. 
+\textbf{D2: Tangent Planes and Linear Approximations.} I can find equations for tangent planes to surfaces and linear approximations of functions at a given point and apply these to solve problems.
+
+\subsection*{Mechanics}
+\begin{enumerate}	
+    \item %14.6 # 30b
+    \question{Find the linearization of $f(x,y)=e^{2y-x}$ at $(1,2)$. Without doing any more calculations, find an equation of the tangent plane of the surface $f(x,y)$ at $(1,2)$.}
+    {% answer goes here
+    $L(x,y)=e^3-e^3(x-1)+2e^3(y-2)$
+    
+    tangent plane: $z=e^3-e^3(x-1)+2e^3(y-2)$
+    }
+    {% solution goes here
+    }
+     
 	
-	\item Find the linearization of $f(x,y,z)=\tan^{-1}(xyz)$ at $(1,1,0)$.
-	\item Use the linearization to approximate $f(2.95, 7.1)$ for the function $f(x,y)=\sqrt{x^2+y}$, knowing that $f(3,7)=4$.	
-	
-	
-	\item Graph the function $z=x^{1/3}y^{1/3}$.  Examine the graph at $(0,0)$ - does it look like the function can be well-approximated by a tangent plane there?  Based on your conclusion, is this function differentiable at $(0,0)$?
-	
-	\item Find the equation for the plane tangent to the graph of $f(x,y)=\sqrt{y-x}$ when $x=1$ and $y=2$.
+	\item \question{Find the linearization of $f(x,y,z)=\arctan(xyz)$ at $(1,1,0)$.}
+    {% answer goes here
+    $L(x,y,z)=z$
+    }
+    {% solution goes here
+    } 
+	\item \question{Use the linearization to approximate $f(2.95, 7.1)$ for the function $f(x,y)=\sqrt{x^2+y}$, knowing that $f(3,7)=4$.	}
+    {% answer goes here
+    $f(2.95, 7.1)\approx 4-1/40$
+    }
+    {% solution goes here
+    }
+    \item \question{Find an equation of the tangent plane to the unit sphere $x^2+y^2+z^2=1$ at the point $\left(\dfrac{1}{\sqrt{2}},\dfrac{1}{2},\dfrac{1}{2}\right)$.}
+    {% answer goes here
+        $\sqrt{2}\left( x-\dfrac{1}{\sqrt{2}}\right)+\left(y-\dfrac{1}{2}\right)+\left(z-\dfrac{1}{2}\right)=0$
+    }
+    {% solution goes here
+    }
+\end{enumerate} 
+\subsection*{Applications}
+\begin{enumerate}[resume]
+    \item \question{Suppose you are shining a flashlight on a smooth surface. The \emph{angle of incidence}, $\theta_i$ is the angle at which a light beam hits the surface, measured with respect to the surface normal (i.e., the normal vector to the tangent plane at point of contact). 
+    The \emph{angle of reflection} $\theta_r$ is the angle of the reflected light beam measured with respect to the surface normal. 
+    The \emph{law of reflection} states that in a vacuum, we must have $\theta_i=\theta_r$. 
+    Draw a labeled picture to convince yourself that this is reasonable.
+    
+    Now, consider the paraboloid $z = x^2+y^2$, and a light ray traveling along the path $\mathbf{r}(t)= (-2,-3,2)t+(3,4,0)$. 
+    Compute the angle of reflection at the point $(1,1,2)$ 
+    [\emph{Hint: How can one find the angle between two vectors?}]. }
+    {% answer goes here
+     $\theta_r = \arccos(\frac{4}{\sqrt{17}})\approx 0.245\ \text{rad}$
+    }
+    {% solution goes here
+    $\mathbf{n}=(2,2,-1),\theta_i=\arccos(\frac{4}{\sqrt{17}})\approx 0.245\ \text{rad}$
+    } 
 \end{enumerate}
-}{}
-
-\iftoggle{answers}{
-\begin{center}{\large \textbf{Math 2551 Worksheet Answers: Linearization and Tangent Planes, Optimization}}
-\end{center}
-
-\begin{enumerate}
-		\item $L(x,y)=e^3-e^3(x-1)+2e^3(y-2)$
-	\item $L(x,y,z)=z$
-	
-	\item $f(2.95, 7.1)=4-1/40$
-	
-	\item No, there are two different tangent planes.  No, the function is not differentiable.
-	
-	\item $z=1-1/2(x-1)+1/2(y-2)$
-	
+\subsection*{Extensions}
+\begin{enumerate}[resume]	
+    \item \question{Use software to graph the function $z=x^{1/3}y^{1/3}$.  
+    Examine the graph at $(0,0)$ - does it look like the function has a tangent plane there? 
+    Use this to deduce a necessary condition for a function $f(x,y)$ to have a tangent plane. }
+    {% answer goes here
+    No, there are two different tangent planes.  The function cannot have a cusp at the point with the tangent plane.
+    }
+    {% solution goes here
+    } 
 \end{enumerate}
-}{}
-\iftoggle{solutions}
-{
-Solutions go here in the same format.
-}{}

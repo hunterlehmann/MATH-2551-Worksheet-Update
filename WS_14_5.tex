@@ -2,15 +2,25 @@
 \fancyhead[R]{\dayeleven}
 
 \section*{\centering Chapter 14.5: Gradients and Directional Derivatives}
+
+\textbf{D1: Computing Derivatives.} I can compute partial derivatives, total derivatives, directional derivatives, and gradients. I can use the Chain Rule for multivariable functions to compute derivatives of composite functions.
+
+\textbf{A1: Interpreting Derivatives.} I can interpret the meaning of a partial derivative, a gradient, or a directional derivative of a function at a given point in a specified direction, including in the context of a graph or a contour plot.
+
 \subsection*{Mechanics}
 \begin{enumerate}
     \item \question{Compute the gradients of each of the following: 
     \begin{enumerate}
         \item $f(x,y)=x^2y$
-        \item $f(x,y,z)=x\sin y+z\cos x$
+        \item $f(x,y,z)=x\sin (y)+z\cos (x)$
         \item $f(x,y,z,w)=x^2+y^2+z^2+w^2$
     \end{enumerate}}
 	{ % answer goes here
+        \begin{enumerate}
+            \item $\langle 2xy, x^2\rangle$
+            \item $\langle \sin(y)-z\sin(x), x\cos(y),\cos(x)\rangle$
+            \item $\langle 2x, 2y, 2z,2w\rangle$
+        \end{enumerate}
 	}
 	{ % solution goes here
 	}
@@ -24,9 +34,9 @@
 
     \item \question{Let $f(x,y)=xy$.  Sketch the curve $f(x,y)= -4$ together with $\nabla f(2,-2)$ and the tangent line at $(2,-2)$. Then, find an equation for the tangent line. What do you notice?}
 	{ % answer goes here
-	Tangent line: $-2(x-2)+2(y+2)=0$\\
+	Tangent line: $-2(x-2)+2(y+2)=0$
 		
-	\includegraphics{14_5_sketch_soln.png}
+	\includegraphics[alt={graph of hyperbola xy=-4 with line -2(x-2)+2(y+2)=0, line tangent to the hyperbola at (2,-2)}]{14_5_sketch_soln.png}
 	}
 	{ % solution goes here
 	}
@@ -34,9 +44,11 @@
 
 \subsection*{Applications}
 \begin{enumerate}[resume]
-    \item \question{Gradients form the basis for "learning" in machine learning through a process called \emph{gradient descent}. Here is a setup and overview of the thematic ideas: we are interested in minimizing a (differentiable) error function $\mathcal{L}(x,y,z)$ (\emph{eg., $\mathcal{L}$ might represent the difference between a predicted quantity vs. the true value}). Though we are able to plug in points, the function $\mathcal{L}$ may be difficult to write down, thus we cannot do "regular calculus" (eg., first derivative test) with it. \\\\
-    Gradients give us a workaround to approximate a local minimum as follows: start by randomly choosing point $(x_0,y_0,z_0)$. Calculate the gradient at this point, and then take a small step in the direction of $-\nabla \mathcal{L}$ [why?] to arrive at a new point $(x_1,y_1,z_1)$. Next, repeat this process with successively smaller step sizes. It turns out that if we choose our initial point and step sizes cleverly, we are (sometimes) able to get closer and closer to a local minimum, without having much knowledge of the function $\mathcal{L}$! Can you anticipate some shortcomings of this algorithm? }
+    \item \question{Gradients form the basis for "learning" in machine learning through a process called \emph{gradient descent}. Here is a setup and overview of the thematic ideas: we are interested in minimizing a (differentiable) error function $\mathcal{L}(x,y,z)$ (\emph{eg., $\mathcal{L}$ might represent the difference between a predicted quantity vs. the true value}). Though we are able to plug in points, the function $\mathcal{L}$ may be difficult to write down, thus we cannot do "regular calculus" (eg., first derivative test) with it. 
+    
+    Gradients give us a workaround to approximate a local minimum as follows: start by randomly choosing point $(x_0,y_0,z_0)$. Calculate the gradient at this point, and then take a small step in the direction of $-\nabla \mathcal{L}(x_0,y_0,z_0)$ [why this direction?] to arrive at a new point $(x_1,y_1,z_1)$. Now, repeat this process with successively smaller step sizes. As it turns out, if we choose our initial point and step sizes cleverly, we are (sometimes) able to get closer and closer to a local minimum, without having much knowledge of the function $\mathcal{L}$! Can you anticipate some shortcomings of this algorithm? }
 	{ % answer goes here
+        Answers will vary.  May include issues with stability or overshooting.
 	}
 	{ % solution goes here
 	}
@@ -77,8 +89,9 @@
 			\item At the point $(-1,1)$ in the direction $\bi +\bj$
 			\item At the point $(-1,1)$ in the direction $-\bi+\bj$
 			\item At the point $(0,-2)$ in the direction $\bi - 2\bj$
-		\end{enumerate}}
-	{ % answer goes here
+		\end{enumerate}
+	\end{minipage}}
+    { % answer goes here
 	\begin{enumerate}
 			\item Negative
 			\item Negative
@@ -89,8 +102,6 @@
 	}
 	{ % solution goes here
 	}
-	
-	\end{minipage}
 
 	\item \question{
 	Let $f(x,y)=-x^2y+xy^2+xy$ and $P=(2,1)$.

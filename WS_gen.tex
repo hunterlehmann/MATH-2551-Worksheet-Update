@@ -5,6 +5,7 @@
 	tagging=on,
 	tagging-setup={math/setup={mathml-SE,mathml-AF}}%, math/alt/use=true} 
 }
+
 \documentclass[12pt]{article}
 \usepackage{unicode-math}
 \usepackage{amsmath}
@@ -41,6 +42,8 @@
 
 \iftoggle{solutions}{\textbf{Solution:} #3}{}}
 
+\setmathfont{latinmodern-math.otf}
+\setmathfont[range=\mathbb]{texgyrepagella-math.otf}	
 \begin{document}
 
 % \begin{myverbbox}{\verbSection}
@@ -59,7 +62,7 @@
 
 % Things to work on:
 
-% \todo[inline]{Add solutions to all worksheet days}
+ %\todo[inline]{Add solutions to all worksheet days}
 % \todo[inline]{Update problems to better ones as needed}
 
 % \todo[inline]{Change all headers to be 
@@ -97,9 +100,9 @@
 % \include{WS_exam_1_review.tex}
 % \include{WS_14_3.tex}
 % \include{WS_14_4.tex}
- \include{WS_14_5.tex}
+% \include{WS_14_5.tex}
 % \include{WS_14_6.tex}
-% \include{WS_14_7_a.tex}
+% \include{WS_14_7.tex}
 % \include{WS_14_7_b.tex}
 % \include{WS_14_8.tex}
 % \include{WS_15_1.tex}
@@ -108,9 +111,8 @@
 % \include{WS_15_4.tex}
 % \include{WS_exam_2_review.tex}
 % \include{WS_15_5.tex}
-% \include{WS_15_6.tex}
-% \include{WS_15_7.tex}
-% \include{WS_15_8.tex}
+ \include{WS_15_7.tex}
+ \include{WS_15_8.tex}
 % \include{WS_16_1.tex}
 % \include{WS_16_2.tex}
 % \include{WS_16_3.tex}

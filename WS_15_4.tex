@@ -1,56 +1,118 @@
+
 \fancyhead[C]{Section 15.4}
-	\fancyhead[R]{\daysixteen}
-\iftoggle{questions}{
-\begin{center}{\large \textbf{Math 2551 Worksheet: Polar Double Integrals}}
-\end{center}
+\fancyhead[R]{\daysixteen}
 
+\section*{\centering Chapter 15.4: Polar Coordinates}
+\textbf{I3: Change of Variables.} I can use polar, cylindrical, and spherical coordinates to transform double and triple integrals and can sketch regions based on given polar, cylindrical, and spherical iterated integrals. I can use general change of variables to transform double and triple integrals for easier calculation.  I can choose the most appropriate coordinate system to evaluate a specific integral.
+
+\subsection*{Mechanics}
 \begin{enumerate}
-
-	\item Evaluate $\displaystyle \iint_D y^2+3x\ dA$ where $D$ is the region in the 3rd quadrant between $x^2+y^2=1$ and $x^2+y^2=9$.
-	
-	\item Change the Cartesian integral
-	\[
+\item \question{
+        Use polar coordinates to compute the integral:
+	\begin{equation*}
 	\int_{0}^{2}\int_{-\sqrt{4-y^2}}^{\sqrt{4-y^2}} e^{-x^2-y^2} \ dx \ dy
-	\]
-	into an equivalent polar integral and evaluate the integral.
+	\end{equation*}
+        }
+        {% answer here
+        
+        }
+        {% solution here
+        
+        }
+    
+	\item \question{
+        Evaluate $\displaystyle \iint_D y^2+3x\ dA$ where $D$ is the region in the 3rd quadrant between $x^2+y^2=1$ and $x^2+y^2=9$.
+        }
+        {% answer here
+        
+        }
+        {% solution here
+        
+        }
 	
-	
-	\item Find the area of the region common to the interiors of the cardioids $r=1+\cos \theta$ and $r=1-\cos \theta$. 
+	\item \question{
+        Use a double integral to determine the volume of the solid that is inside the cylinder $x^2+y^2=16$, below $z=2x^2+2y^2$, and above the $xy$-plane.
+        }
+        {% answer here
+        
+        }
+        {% solution here
+        
+        }
+    \item \question{
+        Give an example of region and function you would \textit{not} want to use polar coordinates to integrate. Justify your answer. 
+        }
+        {% answer here
+        
+        }
+        {% solution here
+        
+        }
+\end{enumerate}
+\subsection*{Applications}
+\begin{enumerate}[resume]
+    \item \question{
+        The previous worksheet featured a problem involving a peculiar Pringles can. This problem rectifies that inconsistency.
+    
+    A true can of Pringles chips may be modeled by the cylinder $x^2+y^2=1$ bounded above and below like $0\leq z\leq 5$. Assuming that the Pringles container is filled up with chips until the surface $z=x^2-y^2+3$, are there more chips or air in the can? \textit{[Hint: Use the identity $\cos^2\theta-\sin^2\theta = \cos 2\theta$].}
+        }
+        {% answer here
+        
+        }
+        {% solution here
+        
+        }
+    
+    \item \question{
+        In the town of Churchill in northern Canada, the density of polar bears around the town dump is given by $p(x,y)=e^{x^2+y^2}$ bears per square unit. Use polar coordinates to compute the average number of polar bears in the region $1\leq x^2+y^2\leq 2 $.
+        }
+        {% answer here
+        
+        }
+        {% solution here
+        
+        }
+\end{enumerate}
+\clearpage
+
+\subsection*{Extensions}
+\begin{enumerate}[resume]	
+	\item \question{
+        Find the area of the region common to the interiors of the cardioids $r=1+\cos \theta$ and $r=1-\cos \theta$. \textit{[Hint: Use symmetry to restrict your calculation to only the first quadrant.]}
 	
 	\begin{center}
-		\pgfplotsset{width=7cm,compat=1.8}
-		\usepgfplotslibrary{polar}
-		\begin{tikzpicture}
-			\begin{polaraxis}
-				\addplot+[mark=none,domain=0:720,samples=600] 
-				{1+cos(x)}; 
-				\addplot+[mark=none,domain=0:720,samples=600] 
-				{1-cos(x)};
-				\addplot[samples=360, mark=none, fill=black!70!black, opacity=0.5, domain=90:270] {1+cos(x)};
-				\addplot[samples=360, mark=none, fill=black!70!black, opacity=0.5, domain=0:90] {1-cos(x)};
-				\addplot[samples=360, mark=none, fill=black!70!black, opacity=0.5, domain=270:360] {1-cos(x)};
-				% equivalent to (x,{sin(..)cos(..)}), i.e.
-				% the expression is the RADIUS
-			\end{polaraxis}
-		\end{tikzpicture}
+		\includegraphics[scale=0.4,alt={plot of the double-teardrop shaped region between the two cardioids specified above, with intersection points at (r,theta)=(0,0),(1,pi/2),(1,3pi/2)}]{ws_15_4_cardioids.png}
 	\end{center}
+        }
+        {% answer here
+        
+        }
+        {% solution here
+        
+        }
 	
-	\item Use a double integral to determine the volume of the solid that is inside the cylinder $x^2+y^2=16$, below $z=2x^2+2y^2$, and above the $xy$-plane.
+	\item \question{
+        An integral of great importance in statistics is the Gaussian integral $I=\Ds \int_0^\infty e^{-x^2}\ dx$.  The function $f(x)=e^{-x^2}$ has no elementary antiderivative, so this integral is hard to compute in the usual way. Fortunately, polar coordinates provide a solution.
 	
-	\item \textbf{Challenge:} An integral of great importance in statistics is the Gaussian integral $I=\Ds \int_0^\infty e^{-x^2}\ dx$.  The function $f(x)=e^{-x^2}$ has no elementary antiderivative, so this integral was hard to compute with the methods of single-variable calculus.
-	
-	Let $I^2=\Ds \left(\int_0^\infty e^{-x^2}\ dx\right)\left(\int_0^\infty e^{-y^2}\ dy\right)$.
+	Notice that $I^2=\Ds \left(\int_0^\infty e^{-x^2}\ dx\right)\left(\int_0^\infty e^{-y^2}\ dy\right) = \int_0^\infty \int_0^\infty e^{-x^2-y^2}\ dxdy $.
 	
 	\begin{enumerate}
-		\item Express $I^2$ as the limit of a double integral in polar coordinates with an appropriately chosen domain.  (Hint: As $R$ goes to infinity, what happens to a disk of radius $R$ centered at the origin?)
+		\item The domain of the above double integral is the first quadrant $[0,\infty)\times [0,\infty)$. Describe this region using polar coordinates, and transform $I^2$ into an (improper) polar integral. 
 		
-		\item Evaluate your double interal to compute the value of $I^2$.  Use this to find the value of the original Gaussian integral $I$.
+		\item Evaluate your double integral to compute the value of $I^2$.  Use this to find the value of the original Gaussian integral $I$.
 	\end{enumerate}
 
 	You can find some history of this integral \href{https://www.york.ac.uk/depts/maths/histstat/normal_history.pdf}{here}.
+        }
+        {% answer here
+        
+        }
+        {% solution here
+        
+        }
 	
 \end{enumerate}
-}{}
+{}
 
 \iftoggle{answers}{
 \begin{center}{\large \textbf{Math 2551 Worksheet Answers: Polar Double Integrals}}
