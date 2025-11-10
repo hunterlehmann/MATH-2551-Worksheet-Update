@@ -1,41 +1,92 @@
 \fancyhead[C]{Section 16.4}
-	\fancyhead[R]{\daytwentyfour}
+\fancyhead[R]{\daytwentyfour}
 
-\iftoggle{questions}{
-\begin{center}{\large \textbf{Math 2551 Worksheet: Curl, Divergence, Green's Theorem}}
-\end{center}
-
-
+\section*{\centering Chapter 16.4: Curl, Divergence and Green's Theorems}
+\textbf{V3: Generalizations of the FTC.} I can state and apply Green's Theorem, Stokes' Theorem and the Divergence Theorem to solve problems in two and three dimensions. I can choose which theorem is appropriate for different integrals. I can compute curl and divergence of vector fields.
+\subsection*{Mechanics}
 \begin{enumerate}
-	
-	\item Below is a plot of a vector field $\bF(x,y)$.  Use this to decide whether the values of $\curl \bF \cdot \bk$ and $\Div \bF$ in each quadrant are positive, negative, or zero.
-	
-	\includegraphics[scale=0.3]{16_3-4pic.png}
-	
-	\item Compute $\Div \bF$ and $\curl \bF\cdot \bk$ for the vector field $\bF(x,y)=\langle \dfrac{y}{4}, 0 \rangle$, which was plotted above.
-	
-	%%
-	\item Let $C$ be the ellipse 
-	\[
+    \item \question{Below is a plot of the vector field $\bF(x,y)=\langle \dfrac{y}{4},0\rangle$. Compute $\curl \bF \cdot \bk$ and $\Div \bF$.
+	\begin{center}
+	    \includegraphics[scale=0.3]{16_3-4pic.png}
+	\end{center}
+	}{% answer here
+        
+        }
+        {% solution here
+        
+        }
+    \item \question{Let $C$ be the ellipse 
+	\begin{equation*}
 	\left( \frac{x}{3} \right)^2 + \left( \frac{y}{4}\right)^2=1.
-	\]
+	\end{equation*}
 	\begin{enumerate}
-		\item Parametrize this ellipse to give it a positive orientation.
+		\item Parametrise this ellipse to give it a positive orientation.
 		
 		\item Let $\bF(x,y)=2x \bi + 2y \bj$. Use Green's theorem to find the circulation of $\bF$ around $C$ and its flux across $C$.
-	\end{enumerate}  
-	\item Let $R$ be the region in the $xy$-plane bounded above by the curve $y=3-x^2$ and below by the curve $y=x^4+1$. Orient this boundary positively. Let 
-	\[
-	\bF(x,y) = (y+e^x \ln y) \bi + (e^x/y)\bj.
-	\]
-	Use Green's theorem to find the circulation of $\bF$ around $C$. What happens when you try to use Green's theorem to evaluate the flux of $\bF$ across $C$? Should you use Green's theorem to evaluate the flux integral?
+	\end{enumerate}}{% answer here
+        
+        }
+        {% solution here
+        
+        }
+    	
+	\item \question{Use Green’s Theorem to find the work done by the force $\bF(x,y)=\langle x(x+y),xy^2\rangle$ in moving a particle from the origin along the $x$-axis to $(1,0)$, then along the line segment to $(0,1)$, and then back to the origin along the $y$-axis.}{% answer here
+        
+        }
+        {% solution here
+        
+        }
+        \item \question{Let $R$ be the region in the $xy$-plane bounded above by the curve $y=3-x^2$ and below by the curve $y=x^4+1$. Orient this boundary positively. Let 
+	\begin{equation*}
+	    \bF(x,y) = (y+e^x \ln y) \bi + (e^x/y)\bj.
+	\end{equation*}
+	Use Green's theorem to find the circulation of $\bF$ around $C$. What happens when you try to use Green's theorem to evaluate the flux of $\bF$ across $C$? Should you use Green's theorem to evaluate the flux integral?}{% answer here
+        
+        }
+        {% solution here
+        
+        }
+\end{enumerate}
+\pagebreak
+\subsection*{Applications}
+\begin{enumerate}[resume]
+    \item \question{One way to interpret Green's theorem is that it relates information on the boundary (the line integral) to information in the interior (the double integral). For example, consider the vector field $\mathbf{A}(x,y)=\frac{1}{2}\left(-y,x\right)$. Use Green's theorem to verify that for a closed curve $C$,
+        \begin{equation*}
+            \int_C \mathbf{A}\cdot \bT \ ds = \textrm{ the area of the region enclosed by } C
+        \end{equation*}
+
+    In fact, this principle underpins the \textit{planimeter}, an area-measuring device dating back to the 17'th century. The planimeter consists of a fixed pole, roller, tracer arm and index needle which traverses a boundary curve $C$. 
+    \begin{center}
+	    \includegraphics[scale=0.15]{planimeter.png}
+	\end{center}
+    Using Green's theorem, one can show that the area of the region enclosed by $C$ (which is probably very complicated) is simply the distance that the roller rolls multiplied by a constant depending on the specifics of the device. One advantage to this approach is that it produces the \textit{exact} area, in contrast to approximation techniques, such as Riemann sums. As such, it has seen use in vastly diverse fields, such as medical imagery (finding the cross-sectional area of a tumor), botany (finding the area of irregularly shaped leaves) and cartography (creating area-accurate maps).}{% answer here
+        
+        }
+        {% solution here
+        
+        }
+\end{enumerate}
+\subsection*{Extensions}
+\begin{enumerate}[resume]
 	
-	\item Use Green’s Theorem to find the work done by the force $\bF(x,y)=\langle x(x+y),xy^2\rangle$ in moving a particle from the origin along the $x$-axis to $(1,0)$, then along the line segment to $(0,1)$, and then back to the origin along the $y$-axis.
-	
-	\item \textbf{Looking ahead:} Find a parameterization (a function $\br(s,t)=\langle x(s,t), y(s,t), z(s,t)\rangle$) of the plane through the origin that contains the vectors $\bi-\bj$ and $\bj-\bk$.  Linear algebra ideas may be useful.	
+	\item \question{Compute the flow of the vector field $\bF(x,y)=(y^2\sin x, 2y\cos x + 3x)$ over the positively oriented semicircle $x^2+y^2=1$, with $y\geq 0$. \textit{[Hint: This is a flow problem on a unclosed curve... what's it doing in the Green's theorem worksheet?]}}{% answer here
+        
+        }
+        {% solution here
+        
+        }
+	\item \question{Consider the vector field $\bF(x,y) = \langle\frac{1}{16}x^2y+\frac{1}{27}y^3,x\rangle$. Among all positively oriented simple closed curves in the plane, which one maximises the work by $\bF$? That is, find the closed curve $C$ which maximises the quantity
+    \begin{equation*}
+        \int_C\bF\cdot \bT \ ds
+    \end{equation*}}{% answer here
+        
+        }
+        {% solution here
+        
+        }
 	
 \end{enumerate}
-}{}
+{}
 
 \iftoggle{answers}
 {

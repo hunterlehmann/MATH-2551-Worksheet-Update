@@ -1,36 +1,95 @@
 \fancyhead[C]{Section 16.3}
-	\fancyhead[R]{\daytwentythree}
-	
-\iftoggle{questions}{
-\begin{center}{\large \textbf{Math 2551 Worksheet: Potentials and Conservative Vector Fields}}
-\end{center}
+\fancyhead[R]{\daytwentythree}
 
+\section*{\centering Chapter 16.3: Conservative Vector Fields}
+\textbf{V2: Conservative Vector Fields.} I can test for conservative vector fields and find potential functions. I can state and apply the Fundamental Theorem of Line Integrals.
+\subsection*{Mechanics}
 \begin{enumerate}
-	\item Show that the vector field $\bF=12xy\bi+6(x^2+y^2)\bj$ is conservative using the mixed partials test, then find a potential function $f$ such that $\bF=\nabla f$.
+    \item \question{Show that the vector field $\bF=12xy\bi+6(x^2+y^2)\bj$ is conservative using the mixed partials test, then find a potential function $f$ such that $\bF=\nabla f$.}{% answer here
+        
+        }
+        {% solution here
+        
+        }
+        \item \question{Find a potential function for $\bF(x,y,z) = (e^x\cos y+yz, xz-e^x\sin y,xy+z)$.}{% answer here
+        
+        }
+        {% solution here
+        
+        }
+    	
+	\item \question{Find a potential function $f$ for $
+	    \bF(x,y,z) = \vecf{2xy}{+(x^2-z^2)}{-2yz}$
+    and compute 
+	\begin{equation*}
+	    \int_C \bF \dotp d\br
+	\end{equation*}
+	where $C$ is any path from $(0,0,0)$ to $(1,2,3)$.}{% answer here
+        
+        }
+        {% solution here
+        
+        }
+    \item \question{Find a potential function $f$ for \[\bF(x,y,z)=\left\langle \dfrac{1}{y}, -\dfrac{x}{y^2}, 2z-1\right\rangle\] and use it to evaluate $\int_C \bF\dotp d\br$ along the curve $C: \br(t)=\langle \sqrt{t}, t+1, t^2\rangle, 0\leq t \leq 1$.}{% answer here
+        
+        }
+        {% solution here
+        
+        }
 	
-	\item Find a potential function $f$ for 
-	\[
-	\bF(x,y,z) = \vecf{2xy}{+(x^2-z^2)}{-2yz}.
-	\]
-	Evaluate 
-	\[
-	\int_C \bF \dotp d\br
-	\]
-	where $C$ is any path from $(0,0,0)$ to $(1,2,3)$.
-	
-	\item Let $a,b,c,d,e$ be real numbers and
+\end{enumerate}
+\subsection*{Applications}
+\begin{enumerate}[resume]
+    \item \question{The namesake of ``conservative'' vector fields has roots in the fact that observable force fields are conservative, so as to obey the law of conservation of energy. Let's verify this fact for the gravitational field in a 2-body system:
+    \begin{equation*}
+        \bF(x,y,z) = \frac{GMm}{(x^2+y^2+z^2)^{3/2}}\langle x,y,z\rangle
+    \end{equation*}
+    where $M,m$ represent the masses of the two bodies and $G$ is a physical constant. Use the curl test to show that $\bF$ is conservative. Verify that the gravitational potential may be given by $V(x,y,z)= \frac{-GMm}{\sqrt{x^2+y^2+z^2}}$.
+    }{% answer here
+        
+        }
+        {% solution here
+        
+        }
+    \item Your classmate in ECON 101 has recently gotten into the honey-selling business and needs to come up with a model describing how much it would cost to ship 10000L of honey from a factory to a destination. They suggest the following honey-transporting scheme: for some conservative vector field $\bF$, the price of moving 10000L of honey from point $A$ to $B$ is about $\int_C \bF\cdot \bT \ ds$, where $C$ is any curve linking $A$ and $B$. Using your MATH 2551 expertise, what would you tell your classmate regarding the accuracy of their model? 
+\end{enumerate}
+\subsection*{Extensions}
+\begin{enumerate}[resume]
+	\item \question{Let $a,b,c,d,e$ be real numbers and
 	\begin{align*}
 		P(x,y,z) &= 3x + 7y + 2z; \\
 		Q(x,y,z) &= ax+by+4z; \\
 		R(x,y,z) &= cx+dy+ez.
 	\end{align*}
-	For which values of the constants $a,b,c,d,e$ is $\bF = \vecf{P}{+Q}{+R}$ a conservative vector field?
-	
-	\item Find a potential function $f$ for \[\bF(x,y,z)=\langle \dfrac{1}{y}, -\dfrac{x}{y^2}, 2z-1\rangle\] and use it to evaluate $\int_C \bF\dotp d\br$ along the curve $C: \br(t)=\langle \sqrt{t}, t+1, t^2\rangle, 0\leq t \leq 1$.
-	
-	\item Compute $\int_C \bF\cdot d\br$ for the vector field $\bF=\left\langle \dfrac{-y}{x^2+y^2},\dfrac{x}{x^2+y^2}\right\rangle$ where the curve C is the unit circle oriented counterclockwise.
+	For which values of the constants $a,b,c,d,e$ is $\bF = \vecf{P}{+Q}{+R}$ a conservative vector field?}{% answer here
+        
+        }
+        {% solution here
+        
+        }
+	\item \question{This problem highlights a intricacy in the curl test. Consider the ``vortex'' vector field $\bF=\left\langle \dfrac{-y}{x^2+y^2},\dfrac{x}{x^2+y^2}\right\rangle$. 
+    \begin{enumerate}
+        \item What is the domain of $\bF$?
+        \item Show that $\bF$ passes the curl test everywhere on its domain. 
+        \item Show that 
+        \begin{equation*}
+            \int_C \bF \cdot \bT \ ds \neq 0
+        \end{equation*}
+        where $C$ is the unit circle. 
+        \item But $\bF$ satisfies the curl test! By the fundamental theorem of line integrals, shouldn't the above integral be zero? What goes wrong? 
+        \item Recompute the integral in (c) but replace $C$ with the boundary of the square $[1,2]\times [1,2]$. What do you notice? Summarize your findings by filling in the blank below:
+        \begin{center}
+        The integral $\int_C \bF\cdot \bT \ ds$ equals zero whenever the region bounded inside $C$ does \emph{not} contain \rule{3cm}{0.15mm}. 
+        \end{center}
+    \end{enumerate}}{% answer here
+        
+        }
+        {% solution here
+        
+        }
 
-\end{enumerate}}{}
+\end{enumerate}
+{}
 
 \iftoggle{answers}
 {

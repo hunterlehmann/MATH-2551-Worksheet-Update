@@ -1,23 +1,23 @@
 \fancyhead[C]{Section 16.2}
-	\fancyhead[R]{\daytwentytwo}
+\fancyhead[R]{\daytwentytwo}
 
-\iftoggle{questions}{
-\begin{center}{\large \textbf{Math 2551 Worksheet: Vector Line Integrals}}
-\end{center}
+\section*{\centering Chapter 16.2: Vector Line Integrals}
 
+\textbf{V1: Line Integrals.} I can set up and evaluate scalar and vector field line integrals in two and three dimensions.
+
+\textbf{A2: Integral Applications.}  I can use multiple integrals to solve physical problems, such as finding area, average value, volume, or the mass or center of mass of a lamina or solid. I can interpret mass, center of mass, work, flow, circulation, flux, and surface area in terms of line and/or surface integrals, as appropriate.
+
+\subsection*{Mechanics}
 \begin{enumerate}
-	
-	\item Consider the vector field $\bF$ (thin arrows) and and let $\bT$ denote the unit tangent vector to the directed curves shown below (denoted with thick arrows). Determine whether \[ \int_C \bF\cdot\bT\ ds\] is positive, negative, or zero for each directed curve $C$.  In other words, determine whether the \textit{work} done by the vector field on each curve is positive, negative, or zero.
-	
-	\includegraphics[scale=0.5]{16_2pic.png}
-	
-	
-	\item Evaluate $\int_C (2x -y)\bi\cdot\ d\br$ where $C$ is parameterized by 
-	$\br(t) = (t^2)\bi+(3t-2)\bj$ , $t \in [0,1]$.\\
-	
-	\item Find the work done by the force $\bF= xy \bi +(y-x) \bj$ over the straight line from $(1,1)$ to $(2,3)$.\\
-	
-	\item Consider the closed curve $C$ consisting of a semicircle and a straight line segment as follow:
+    \item \question{Evaluate $\int_C (2x -y)\bi\cdot\ d\br$ where $C$ is parameterized by 
+	$\br(t) = (t^2)\bi+(3t-2)\bj$ , $t \in [0,1]$.}
+        {% answer here
+        
+        }
+        {% solution here
+        
+        }
+    \item \question{Consider the closed curve $C$ consisting of a semicircle and a straight line segment as follow:
 	\[
 	\br_1(t)=(2 \cos t)\bi+(2 \sin t)\bj, \ t \in [0,\pi], \qquad \br_2(t)=t\bi, \ t\in [-2,2]
 	\]
@@ -25,12 +25,66 @@
 	\[
 	\bF(x,y) = -y^2 \bi + x^2 \bj.
 	\]
-	Find the circulation of $\bF$ around $C$ and the flux of $\bF$ across $C$. 
-	%%
-	
-	\item Give an example of a non-trivial force field $\bF$ (not the zero vector at all points) and a non-trivial path $\br(t)$ (not the stationary path at a point $P$) for which the total work done moving along the path is zero.
+	Find the circulation of $\bF$ around $C$ and the flux of $\bF$ across $C$. }
+        {% answer here
+        
+        }
+        {% solution here
+        
+        }
+    \item \question{Find the work done by the force $\bF= xy \bi +(y-x) \bj$ over the straight line from $(1,1)$ to $(2,3)$.}
+        {% answer here
+        
+        }
+        {% solution here
+        
+        }   
 \end{enumerate}
-}{}
+\subsection*{Applications}
+\begin{enumerate}[resume]
+    \item \question{\textit{Ampere's Law} states that for a magnetic field $\mathbf{B}$, and closed curve $C$, we have that
+    \begin{equation*}
+        \int_C \mathbf{B}\cdot d\br = \mu_0I_{enc}
+    \end{equation*}
+    where $\mu_0$ is a physical constant, and $I_{enc}$ is the total current in the region enclosed by $C$. Compute $I_{enc}$ in the unit square $[0,1] \times [0,1]$ induced by the magnetic field $\mathbf{B}(x,y)=(x^2y,5-xy^2)$. Also compute the magnetic flux across the same square.} {% answer here
+        
+        }
+        {% solution here
+        
+        }
+        \item \question{Consider a radial force field $\mathbf{F}(x,y) = (Kx,Ky)$ for $K>0$, and a particle moving counterclockwise on the unit circle. How much work does the force field exert on the particle over one loop around the circle? Give an example of a real life force whose field look like $\mathbf{F}$ (up to choosing a constant $K$).} {% answer here
+        
+        }
+        {% solution here        
+        }
+\end{enumerate}
+\subsection*{Extensions}
+\begin{enumerate}[resume]
+	
+	\item \question{Consider the vector field $\bF$ (thin arrows) and and let $\bT$ denote the unit tangent vector to the oriented curves shown below (thick arrows). Determine whether \[ \int_C \bF\cdot\bT\ ds\] is positive, negative, or zero for each oriented curve $C$.  In other words, determine whether the work done by the vector field on each curve is positive, negative, or zero.
+	\begin{center}
+	    \includegraphics[scale=0.5,alt={vector field with five curves embedded; top left a curve perpendicular to the field at each point, top right a curve with symmetric halves moving with and against the field, bottom right a curve split half and half between moving against a strong portion of the field and with a weak portion, bottom left a curve moving against the field at every point, center a curve moving with the field at every point}]{16_2pic.png}
+	\end{center}}{% answer here
+        
+        }
+        {% solution here        
+        }
+    \item \question{\textit{The Work-Energy Theorem} tells us that the total work done by a \emph{conservative} force field $\bF$ equals the difference in potential energy:
+    \begin{equation*}
+        \int_C \bF\cdot\bT\ ds = PE_f-PE_i
+    \end{equation*}
+    On the other hand, the principle of conservation of energy tells us that when we traverse any closed path, no (potential) energy can be gained or lost; it must always be preserved. Using only this fact, verify that the following vector fields are not conservative force fields by integrating over an appropriate loop:
+    \begin{enumerate}
+    \item $\mathbf{F}(x,y)=(x^2y,5-xy^2)$
+    \item $\bF(x,y) = \left(xy,x^2\right)$
+        \item $\bF(x,y) = \left(\frac{-y}{x^2+y^2},\frac{x}{x^2+y^2}\right)$ \textit{[Hint: Those fractions would look a lot nicer if their denominators were equal to 1.]}
+    \end{enumerate}}{% answer here
+        
+        }
+        {% solution here        
+        }
+\end{enumerate}
+{}
 
 \iftoggle{answers}{
 \begin{center}{\large \textbf{Math 2551 Worksheet Answers: Vector Line Integrals}}
