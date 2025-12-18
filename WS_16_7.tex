@@ -3,17 +3,84 @@
 
 \section*{\centering Chapter 16.7: Stokes' Theorem}
 
+\textbf{V3: Generalizations of the FTC.} I can state and apply Green's Theorem, Stokes' Theorem and the Divergence Theorem to solve problems in two and three dimensions. I can choose which theorem is appropriate for different integrals. I can compute curl and divergence of vector fields.
+
+\subsection*{Mechanics}
 \begin{enumerate}
+    \item \question{Consider the three surfaces: $S$ the hemisphere given by $x^2+y^2 + z^2 = 4$, for $z\geq 0$, $P$ the portion of a paraboloid given by $z = 4-x^2-y^2$, for $z\geq 0$, and $H$ the hyperboloid $z^2 = x^2+y^2-4$, for $z\leq 0$. Use Stokes' Theorem to explain why, if $\bF$ is a smooth vector field in $\R^3$, we must have \begin{equation*}\iint_S (\nabla \times \bF) \cdot \bn\ d\sigma=\iint_P (\nabla \times \bF) \cdot \bn\ d\sigma = -\iint_H (\nabla \times \bF) \cdot \bn\ d\sigma
+    \end{equation*}}
+{% answer here
+        
+        }
+        {% solution here
+        
+        }
 
-\item Let $H$ be the hemisphere and $P$ be the portion of a paraboloid shown below. Use Stokes' Theorem to explain why, if $\bF$ is a vector field on $\R^3$ whose components have continuous partial derivatives, we must have \[\iint_H (\nabla \times \bF) \dotp \bn\ d\sigma=\iint_P (\nabla \times \bF) \dotp \bn\ d\sigma .\]
+    \item \question{A particle moves along line segments from the origin to the points $(1,0,0), (1,2,1),(0,2,1)$, and back to the origin under the influence of the force field
+    \begin{equation*}
+        \bF(x,y,z)=z^2\bi+2xy\bj+2y^2\bk
+    \end{equation*}
+Find the work done by the field on the particle.}{% answer here
+        
+        }
+        {% solution here
+        
+        }
+        \item \question{Compute $\iint_S (\nabla \times \bF) \cdot \bn\ d\sigma$ where $S$ is the surface $z = e^{-x^2-y^2}$ for $z\geq \frac{1}{e}$, and $\bF(x,y,z) = (-y,x,1)$.}{% answer here
+        
+        }
+        {% solution here
+        
+        }
+\end{enumerate}
 
-\includegraphics[scale=0.8]{ws_27_ph.png}
-
-\item Use Stokes' Theorem to evaluate $\iint_S (\nabla \times \bF)\dotp \bn\ d\sigma$, where $\bF=\langle x^2z^2,y^2z^2,xyz\rangle$ and $S$ is the part of the paraboloid $z=x^2+y^2$ that lies inside the cylinder $x^2+y^2=4$, oriented upward.
-
-\item A particle moves along line segments from the origin to the points $(1,0,0), (1,2,1),(0,2,1)$, and back to the origin under the influence of the force field
-\[\bF(x,y,z)=z^2\bi+2xy\bj+2y^2\bk. \]
-Find the work done by the field on the particle.
+\subsection*{Applications}
+\begin{enumerate}[resume]
+    \item In electrodynamics, \emph{Faraday's Law} relates the electric field $\mathbf{E}$ and magnetic field $\mathbf{B}$ via the equation $\curl (\mathbf{E})= \frac{d}{dt}\mathbf{B}$. Integrating both sides with respect to any surface $S$ yields 
+    \begin{equation*}
+        \iint_S \curl (\mathbf{E})\cdot \bn \ d\sigma = -\frac{d}{dt}\iint_S \mathbf{B}\cdot \bn \ d\sigma
+    \end{equation*}
+    The integral on the right is called the \emph{magnetic flux}. Applying Stokes' theorem to the left gives 
+    \begin{equation*}
+        \int_{\partial S} \mathbf{E}\cdot \bT\ ds = -\frac{d}{dt}\iint_S \mathbf{B}\cdot \bn \ d\sigma
+    \end{equation*}
+    The integral on the left is called the \emph{electric potential}. Interpret the above equation to deduce \emph{Faraday's Law of Induction:}
+     \begin{center}
+        One may generate an \rule{3cm}{0.15mm} by first causing a change in \rule{3cm}{0.15mm}. 
+     \end{center}
+     This is the driving principle underpinning an AC current generator. It uses a system of rotating magnets (or related things) to constantly change the \rule{3cm}{0.15mm}, in order to generate \rule{3cm}{0.15mm}. 
+\end{enumerate}
+\subsection*{Extensions}
+\begin{enumerate}[resume]
+    \item \question{Use Stokes' Theorem to evaluate $\iint_S (\nabla \times \bF)\cdot \bn\ d\sigma$, where $\bF=\langle x^2z^2,y^2z^2,xyz\rangle$ and $S$ is the part of the paraboloid $z=x^2+y^2$ that lies inside the cylinder $x^2+y^2=4$, oriented upward.}{% answer here
+        
+        }
+        {% solution here
+        
+        }
+    \item \question{In Section 16.3, you learned that a curl-free vector field $\bF$ on a simply-connected domain is necessarily conservative (ie., path-independent). In this exercise, you will justify this statement using Stokes' Theorem
+    \begin{enumerate}
+        \item Fix a curl-free vector field $\bF$, and also fix any two points $A,B \in \mathbb{R}^3$ and let $C_1$ and $C_2$ be curves connecting $A$ to $B$. For the moment, assume that $C_1$ and $C_2$ do not intersect. Use Stokes' Theorem to show that
+        \begin{equation*}
+            \int_{C_1\cup -C_2}\bF\cdot \bT \ ds = 0
+        \end{equation*}
+        where $-C_2$ represents the path $C_2$ traced backwards (ie., from $B$ to $A$). \emph{[Hint: To apply Stokes' theorem, you need to pick a surface. Draw a picture of the situation to help you find this surface.]}
+        \item You have shown that line integrals along \emph{simple} closed curves vanish. Of course, arbitrary choices of $C_2$ possibly intersect $C_1$! Nevertheless, assuming that $C_2$ can only intersect $C_1$ finitely many times, show that we still have that 
+        \begin{equation*}
+            \int_{C_1\cup -C_2}\bF\cdot \bT \ ds = 0
+        \end{equation*}
+        \emph{[Hint: Draw a picture. Decompose the closed curve $C_1\cup -C_2$ into a collection of simple closed curves.]}
+        \item Conclude that 
+        \begin{equation*}
+            \int_{C_1}\bF\cdot \bT \ ds = \int_{C_2}\bF\cdot \bT \ ds
+        \end{equation*}
+        \item Where did we use the simply-connected assumption?
+    \end{enumerate}}{% answer here
+        
+        }
+        {% solution here
+        
+        }
 \end{enumerate}
 {}
 
