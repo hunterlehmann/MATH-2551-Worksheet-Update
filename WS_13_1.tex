@@ -1,44 +1,93 @@
-
 \fancyhead[C]{Section 13.1}
 \fancyhead[R]{\dayfour}
 
-\iftoggle{questions}{
-\begin{center}{\large \textbf{Math 2551 Worksheet: Curves in Space and Their Tangents}}
-\end{center}
+\section*{\centering Chapter 13.1: The Geometry of Curves in Space}
+\textbf{G3: Geometry of Curves.} I can compute the arc length of a curve in two or three dimensions and apply arc length to solve problems. I can compute normal vectors and curvature for curves in two and three dimensions.  I can interpret these objects geometrically and in applications.\\
 
+\textbf{G5: Parameterization.} I can find parametric equations for common curves, such as line segments, graphs of functions of one variable, circles, and ellipses.  I can match given parametric equations to Cartesian equations and graphs. I can parameterize common surfaces, such as planes, quadric surfaces, and functions of two variables.
 
+\subsection*{Mechanics}
 \begin{enumerate}
+	\item \question{Describe the graph of the curve $\br(t)=\langle t\cos(t), t\sin(t), t\rangle$, $t\in\R$.}
+    {% answer goes here
 
-	\item Describe the graph of the curve $\br(t)=\langle t\cos(t), t\sin(t), t\rangle$, $t\in\R$.\\
-	
-	\item Find a vector-valued function for the curve of intersection of the cylinder $x^2+y^2=9$ and the plane $y+z=2$.
-	
-	\textit{Hint: How could you parameterize the circle $x^2+y^2=9$ in the plane?}\\
-	
-	\item What is the difference between the parameteric curves $\bff(t)=\langle t, t,t^2\rangle, \bg(t)=\langle t^2, t^2, t^4\rangle$, and $\bh(t)=\langle \sin(t),\sin(t),\sin^2(t)\rangle$ as $t$ runs over all real numbers?\\
-	
-	\item With a parametric plot and a set of $t$ values, we can associate a `direction'.  For example, the curve $\langle \cos(t),\sin(t)\rangle$, $t\in[0,2\pi]$ is the unit circle traced counterclockwise.  How can we change a set of given parametric equations and $t$ values to get the same curve, only traced backwards?
-	
-	\item The motion of a particle in the $xy$-plane at time $t$ is described by the vector function
+    }
+    {% solution goes here
+    } 
+    \item \question{One important family of curves that appear repeatedly in this course are the \textit{graphs} of functions. For a function $y=f(x)$ in $\R^2$, find a parametrisation $\br(t)$ which traverses the curve from left to right.}
+    {% answer goes here
+
+    }
+    {% solution goes here
+    } 
+    \item \question{The motion of a particle in the $xy$-plane at time $t$ is described by the vector function
 	\[\br(t)= e^{t}\bi + \frac{2}{9}e^{2t}\bj\]
 	\begin{enumerate}
-		\item Find an equation in $x$ and $y$ whose graph is the path of the particle. Consider how $y(t)$ is related to $x(t)$ and what values $x(t)$ takes on.
+		\item Nodding to the previous problem, the graph of this curve is equal to the graph of some function $y=f(x)$ in the plane. What is $f(x)$? \textit{[Hint: consider how $y(t)$ is related to $x(t)$ and what values $x(t)$ takes on]}
 		
 		\item Find the particle's velocity and acceleration vectors at $t=\ln(3).$
 		
 		\item Sketch the path of the particle and include the particle's velocity and acceleration vectors at $t=\ln(3).$
-	\end{enumerate}
+	\end{enumerate}}
+    {% answer goes here
+
+    }
+    {% solution goes here
+    } 
+    \item \question{Parametrise the tangent line to the space curve
+	\begin{equation*}
+	    \br(t)=\left\langle \ln t, \frac{t-1}{t+2}, t \ln t \right\rangle
+    \end{equation*}
+    when $t=1$.}
+    {% answer goes here
+
+    }
+    {% solution goes here
+    } 
+\end{enumerate}
+\subsection*{Applications}
+\begin{enumerate}[resume]
+    \item \question{Determine the point at which the two curves $\bff(t)=\langle t, t^2,t^3\rangle$ and $\bg(t)=\langle \cos(t), \cos(2t), t+1\rangle$ intersect, and find the angle between the curves at that point. \textit{[Hint: You'll need to set this up like the line intersection problems you've seen before, writing one in $s$ and one in $t$]}. 
 	
-	\item Find the parametric equations for the line that is tangent to the curve \\
-	\[\vect r(t)=\left\langle \ln t, \frac{t-1}{t+2}, t \ln t \right\rangle, \text{ at } t = 1.\]
+	If these two functions were the trajectories of two bumblebees on the same scale of time, would the bees collide? Explain.}{% answer goes here
+
+    }
+    {% solution goes here
+    }  
+    \item \question{You are an interior decorator for the secret permanent residence of James Bond. His loft consists of a cylindrical room with walls given by $x^2+y^2=1$, with the first floor at $z= 0$ and second floor at $z=5$. You are to build a spiraling staircase from the point $(1,0,0)$ on the first floor to the point $(1,0,5)$ on the second floor. Being the international superspy he is, Mr. Bond wants to discourage any intruders from going upstairs, and hence requests the staircase wrap 10 full (anticlockwise) times around the room until it reaches the desired point on the second floor. Parametrise the staircase you must build. \\\\
+    Also, compute the total length of the staircase \textit{[Hint: This will be easier to to next week, but you can still do this. Think about "unrolling" the walls of the cylinder.]}}
+    {% answer goes here
+
+    }
+    {% solution goes here
+    } 
+    
+\end{enumerate}
+\subsection*{Extensions}
+\begin{enumerate}[resume]
+	 \item \question{What is the difference between the parametric curves $\bff(t)=\langle t, t,t^2\rangle, \bg(t)=\langle t^2, t^2, t^4\rangle$, and $\bh(t)=\langle \sin(t),\sin(t),\sin^2(t)\rangle$, for $t\in \R$? What if $t\in [0,\pi]?$}
+    {% answer goes here
+
+    }
+    {% solution goes here
+    } 
+	\item \question{Find a vector-valued function for the curve of intersection of the cylinder $x^2+y^2=9$ and the plane $y+z=2$. [\textit{Hint: How could you parameterize the circle $x^2+y^2=9$ in the plane?}]}
+    {% answer goes here
+
+    }
+    {% solution goes here
+    } 
 	
-	\item Determine the point at which $\bff(t)=\langle t, t^2,t^3\rangle$ and $\bg(t)=\langle \cos(t), \cos(2t), t+1\rangle$ intersect, and find the angle between the curves at that point. (Hint: You'll need to set this up like the line intersection problems you've seen before, writing one in $s$ and one in $t$). 
-	
-	If these two functions were the trajectories of two bumblebees on the same scale of time, would the bees collide at their point of intersection? Explain.
+	\item \question{Let $\br(t)$ from $a\leq t \leq b$ be a parametrisation of a space curve. Observe that implicit in the equation is an associated direction; the curve goes \textit{from} $\br(a)$ \textit{to} $\br(b)$. One may instead wish for their curve to go the other way: \textit{from} $\br(b)$ \textit{to} $\br(a)$. So given a parametric curve $\br(t)$, find a related paramterisation (along with time bounds) that traverses the same path, but backwards. Use this to find a parametrisation of the unit circle in $\R^2$, oriented clockwise} 
+    {% answer goes here
+
+    }
+    {% solution goes here
+    }
 	
 	\item Find the equation of the plane perpendicular to the curve $\langle \cos(t),\sin(t),\cos(6t)\rangle$ when $t=\pi/4$.
 \end{enumerate}
-}{}
+{}
 
 \iftoggle{answers}{
 \fancyhead[R]{\dayfour}

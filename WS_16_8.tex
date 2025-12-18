@@ -1,0 +1,82 @@
+\fancyhead[C]{Section 16.8}
+\fancyhead[R]{\daytwentysix}
+
+\section*{\centering Chapter 16.8: The Divergence Theorem}
+
+\textbf{V3: Generalizations of the FTC.} I can state and apply Green's Theorem, Stokes' Theorem and the Divergence Theorem to solve problems in two and three dimensions. I can choose which theorem is appropriate for different integrals. I can compute curl and divergence of vector fields.
+
+\subsection*{Mechanics}
+\begin{enumerate}
+    \item \question{Consider the vector field $\bF(x,y,z) = (z+y,x-z,x-y)$. Compute the flux out of the ``closed'' cone $z^2=x^2+y^2$ with $z\in [0,1]$, capped off with a disc in the $z=1$ plane in two ways: first directly using parameterizations, then by invoking the divergence theorem. Finally, verify that your answers agree.}{% answer here
+        
+        }
+        {% solution here
+        
+        }
+        \item \question{Use the divergence theorem to compute the \emph{inward} flux of the field \[\bF(x,y,z) = (2xz,1-4xy^2,2z-z^2)\] into the surface $S$ bound by the paraboloid $z=1-x^2-y^2$ and the $xy$-plane.}{% answer here
+        
+        }
+        {% solution here
+        
+        }
+
+\end{enumerate}
+\subsection*{Applications}
+\begin{enumerate}[resume]
+    \item \question{Suppose that a velocity field for a fluid is given by $\bF(x,y,z) = (x/y,x/z,-z/y)$. Compute the flow rate of the fluid across the cube $[-3,4]\times [1,2]\times [2,8]$.
+    
+    Note: Fluids with a velocity field $\bF$ satisfying $\Div \bF = 0$ everywhere are called \emph{incompressible}, since they are not allowed to ``expand'' or ``shrink'' at any point. Most liquids are only slightly compressible (i.e., $\Div \bF \approx 0$), so the theory of incompressible fluids is relatively robust for most applications.}{% answer here
+        
+        }
+        {% solution here
+        
+        }
+\end{enumerate}
+\subsection*{Extensions}
+\begin{enumerate}[resume]
+    \item \question{Consider the vector field $\bF(x,y,z) = \left(\frac{1}{z}\cos (xz),y\sin(xz),1\right)$. Compute the flux through the lateral walls (i.e., excluding the top and bottom) of the cylinder $x^2+y^2=1$, with $1\leq z\leq 2$.  \emph{[Hint: This is a problem about a surface which isn't closed... why is it in the divergence theorem worksheet?]}}{% answer here
+        
+        }
+        {% solution here
+        
+        }
+    \item \question{Consider the radial vector field 
+    \begin{equation*}
+        \bF(x,y,z) = \frac{1}{(x^2+y^2+z^2)^{3/2}}\langle x,y,z\rangle 
+    \end{equation*}
+    \begin{enumerate}
+        \item Consider the region between two concentric spheres: $V = \{1\leq x^2+y^2+z^2\leq R^2\}\subset \mathbb{R}^3$, where $R$ is any number bigger than 1. Calculate the \emph{net} flux across the boundary of this region.
+        \item Compute the outward flux of $\bF$ over \emph{any sphere} of radius $R$ centered at the origin: $x^2+y^2+z^2=R^2$.
+        \item Generalize your answer to the previous problem: 
+         \begin{center}
+        The outward flux of $\bF$ over \emph{any smooth surface} containing the origin equals  \rule{3cm}{0.15mm}. \emph{[Note: this is essentially Gauss' Law for a point charge!]}
+        \end{center}
+    \end{enumerate}}{% answer here
+        
+        }
+        {% solution here
+        
+        }
+\end{enumerate}
+{}
+
+\iftoggle{answers}
+{
+	\begin{center}{\large \textbf{Math 2551 Worksheet Answers: Stokes' Theorem}}
+	\end{center}
+	
+	
+	\begin{enumerate}
+		
+		\item $H$ and $P$ have the same oriented boundary curve $C$ provided that they are oriented in the same way, so by Stokes' theorem the given integrals must be equal.
+		
+		\item 0
+		
+		\item 3
+	\end{enumerate}
+
+}{}
+\iftoggle{solutions}
+{
+Solutions go here in the same format.
+}{}

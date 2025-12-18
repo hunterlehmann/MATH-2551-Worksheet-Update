@@ -1,0 +1,4 @@
+$pdflatex = 'pdflatex-dev';
+$lualatex = 'lualatex-dev';
+$xelatex = 'xelatex-dev';
+$latex = 'latex-dev';
