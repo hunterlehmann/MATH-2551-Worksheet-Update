@@ -48,7 +48,21 @@ In an alternate universe, Atlanta is famous for her extravagant beaches and pris
     {% answer goes here
     Highest tides are at $1$ occurring at $(3\pi/2,\pi)$, lowest troughs at $-1$ occurring at $(\pi/2,\pi)$.
     }
-    {% solution goes here
+    {We are analyzing the local maxima and minima of the function $h(x,y) = \sin(x)\cos (y)$ over the domain $(0,2\pi)\times (0,2\pi)$. The critical points occur when $(\cos x\cos y ,-\sin x \sin y )=(0,0)$. From the second component, there are two cases to consider: Either $\sin x = 0$ or $\sin y = 0$. In the former case, $x = \pi$. Plugging back into the first component yields that $y = \pi/4$ or $3\pi/4$. The second case is symmetric to the first, so in total we have four critical points
+\begin{equation*}
+    \left(\pi, \frac{\pi}{2}\right), \left(\pi, \frac{3\pi}{2}\right), \left(\frac{\pi}{2}, \pi\right), \left( \frac{3\pi}{2},\pi\right) 
+\end{equation*}
+We will now look at the Hessian: 
+\begin{equation*}
+    H(h) = \begin{bmatrix}
+        f_{xx}  & f_{xy}\\
+        f_{yx} & f_{yy}
+    \end{bmatrix} = \begin{bmatrix}
+        -\sin x \cos y   & -\cos x \sin y\\
+        -\cos x \sin y& -\sin x\cos y
+    \end{bmatrix}\implies \det H(f) = \sin^2x\cos^2y - \sin^2y \cos^2x
+\end{equation*}
+By a routine plug and chug, we note that the first two critical points have $\det H(h) = -1$ and the second two have $\det H(h) = 1$. So the first two critical points are saddles, whereas $\left(\frac{\pi}{2}, \pi\right)$ has $f_{xx}=1$ so it is a local min, and thus a trough. Finally, $\left( \frac{3\pi}{2},\pi\right)$ has $f_{xx}=-1$, so it is a local maximum and thus a tide. 
     }
     \item \question{Let us interpret local maxima as peaks of mountains, local minima as valleys and saddle points as passes between mountain peaks. Consider the statement: ``It is impossible to have two mountain peaks without some sort of valley or pass connecting them. Therefore, if a function has two local maxima, there must also be a saddle point or a local minimum." Do you agree with this? Verify your answer by using software to graph the function $f(x,y)=4x^2e^y-2x^4-e^4y$.} 
 	{% answer goes here

@@ -35,7 +35,13 @@
     {% answer goes here
     $ C_{min}=\frac{11230}{3} \approx \$3743.33$.
     }
-    {% solution goes here
+    {We will optimize using the objective function $C(g,k) = 5g^2+2gk+3k^2+10$ and constraint function $g+k=40$. Our system of equations is thus
+\begin{align*}
+    10g+2k &= \lambda  \\
+    2g+6k &= \lambda \\
+    g+k &= 40
+\end{align*}
+This system of linear equations can be solved using Gaussian elimination, or any other basic technique. For example, adding four times equation 3 to equation 1 yields $14g+6k=160$. Subtracting equation 2 from this gives $12g = 160 \iff g = 40/3$. It follows that $k = 80/3$, and so the minimal production cost is about $\$3743.33$. \textit{[The astute student might ask why Lagrange here doesn't find a maximum. This is because it only finds interior extrema to the level manifold $f^{-1}(c)$]}. 
     } 
     \item \question{The height of a mountain is given by $h(x,y)= 300-(3x^2+4xy+3y^2)$. Compute the height of the lowest point on the mountain within $\sqrt{200}$ units of the origin. Where might this point occur? Are there multiple points where this occurs? \textit{[Hint: First, justify why none of $x,y,\lambda$ can be zero. Then solve for $\lambda$.}]}
     {% answer goes here

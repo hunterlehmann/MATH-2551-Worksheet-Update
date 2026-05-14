@@ -9,18 +9,29 @@
     \item \question{Solve the following initial value problems: 
     \begin{enumerate}
         \item $\br''(t)=-\bi-\bj-\bk, \quad t\geq 0, \qquad \br'(0)=5 \bi, \qquad \br(0)=10\bi+10\bj+10\bk$
-        \item $\br''(t)=(t,e^t,e^{-1}) \quad t\in \R, \qquad \br'(0)=(0,0,1), \qquad \br(0)=(0,1,1)$
+        \item $\br''(t)=(t,e^t,e^{-t}) \quad t\in \R, \qquad \br'(0)=(0,0,1), \qquad \br(0)=(0,1,1)$
     \end{enumerate}}
     {% answer goes here
 
     }
-    {% solution goes here
+    {We use the standard antidifferentiation process. From $\br''$, we observe that
+\begin{equation*}
+    \br'(t) = \left(\frac{1}{2}t^2 + C_1, e^t+C_2, -e^{-t}+C_3\right)
+\end{equation*}
+in terms of constants $C_1, C_2$ and $C_3$. The initial condition $\br'(0)=(0,0,1)$ forces $(C_1,C_2,C_3) = (0,-1,2)$ and so 
+\begin{equation*}
+    \br'(t) = \left(\frac{1}{2}t^2, e^t-1, -e^{-t}+2\right) \implies \br(t) = \left(\frac{1}{6}t^3+D_1, e^t-t+D_2, e^{-t}+2t+D_3\right)
+\end{equation*}
+for three separate constants $D_1,D_2$ and $D_3$. The initial condition $\br(0)= (0,1,1)$ forces $(D_1,D_2,D_3) = (0,0,0)$. Therefore
+\begin{equation*}
+    \br(t) = \left(\frac{1}{6}t^3, e^t-t, e^{-t}+2t\right)
+\end{equation*}
     } 
 \end{enumerate}
 \subsection*{Applications}
 \begin{enumerate}[resume]
 
-	\item \question{A baseball is hit when it is $2.5$ ft above the ground. It leaves the bat with an initial velocity of $140$ ft/sec at a launch angle of $30^\circ$. At the instant the ball is hit, an instantaneous gust of wind blows against the ball, adding a component of $-14 \bi$ (ft/sec) to the ball's initial velocity. A $15$ ft high fence lies $400$ ft from the home plate in the direction of the flight. (Note that gravity, g $= -32 \bj$ ft/sec$^2$)
+	\item \question{A baseball is hit when it is $2.5$ ft above the ground. It leaves the bat with an initial velocity of $140$ ft/sec at a launch angle of $30^\circ$. At the instant the ball is hit, an instantaneous gust of wind blows against the ball, adding a component of $-14 \bi$ (ft/sec) to the ball's initial velocity. A $15$ ft high fence lies $400$ ft from the home plate in the direction of the flight. (Note that the acceleration due to gravity is  $g= -32 \bj$ ft/sec$^2$)
 	
 	\begin{enumerate}
 		\item Find a vector equation for the path of the baseball.
@@ -39,12 +50,25 @@
     {% solution goes here
     } 
     \item \question{A fortified medieval city is surrounded walls with length 500m and height 15m. You are the commander of an attacking army and the closest you can get to the wall is 100m. Your plan is to set fire to the city by catapulting heated rocks over the wall at an initial speed
-of 80 ms$^{-1}$. At what range of angles should you tell your army to set the catapult? You may assume the path of the rocks is perpendicular to the wall, and that you are as close as possible. \textit{[Note: in contrast to the previous problem, here we have $g = -9.8 \bj$ ms$^{-2}$].}}
+of 80 ms$^{-1}$. At what range of angles should you tell your army to set the catapult? You may assume the path of the rocks is perpendicular to the wall, and that you are as close as possible. \textit{[Note: in contrast to the previous problem, here we need to use $g = -9.8 \bj$ ms$^{-2}$].}}
     {% answer goes here
 
     }
     {% solution goes here
-    } 
+    }
+    \pagebreak 
+    \item \question{There are 5 seconds left in the annual Tech-UGA football game, and as the targeted receiver in the final play, down 3 points, you've got one chance to send the Dawgs packing. \\\\
+    The defense drops back on the snap, allowing your quarterback 2 seconds to throw after you start running. They sling the ball at an initial angle of $40^\circ$ at a speed of $20$ ms$^{-1}$. Your initial speed is $6$ ms$^{-1}$, but as soon as you see the ball come out, you realize that you need to speed up to catch the ball. Assuming your acceleration is constant, how fast do you need to accelerate to catch the ball "in stride" (ie., intercept the ball as it's about to hit the ground) and go on to score the game-winning touchdown? Also, how fast will you be running when you make the catch? \textit{[Note: be careful about the scale of time.]}}{% answer goes here
+
+    }
+    {The key to this problem is to keep track of the scale of time. One way to do this is to align $t=0$ with when the QB throws. Using this frame of reference, let $\br(t)$ denote the position of the football. This function will be determined by the initial value problem $\br''(t) = (0,-9.8)$, $\br'(0) = (20\cos 40^\circ, 20\sin 40^\circ) \approx (15.32,12.86)$ and $\br(0)=(0,0)$. We have that $\br'(t) = (C_1,-9.8t+C_2)$, and the initial values demand that $\br'(t) = (15.32,-9.8t+12.86)$ and hence $\br(t) = (15.32t,-4.9t^2+12.86t)$. I have ommitted the constants computation because they all vanish. To know how to catch the ball in stride, we need to know both the airtime of the ball, as well as the location of the catch. The first is found by setting $0 = y(t) = -4.9t^2+12.86t \implies t = 2.62$. The latter is found by $x(2.62) = 15.32(2.62) = 40.14$.\\\\
+Finally, we need to find the constant acceleration $a$ required to reach 40.14m in 2.62 seconds. Note that by the time the ball is thrown, you've already run for 2 seconds at 6 ms$^{-1}$, or for 12 metres. Using a familiar kinematics formula from physics, we solve for $a$: 
+\begin{equation*}
+    \frac{1}{2}at^2+v_0t + x_0= 40.14 \implies  \frac{1}{2}a(2.62)^2+6(2.62) + 12 = 40.14 \iff a \approx 3.62
+\end{equation*}
+Therefore, you must accelerate at a rate of $3.62$ ms$^{-2}$, and you will be running at $6+3.62(2.62)=15.48$ ms$^{-1}$ at the time of the catch. To put this problem into perspective, we got a 44 yard pass, with a receiver clocking around 35 mph. NFL players regularly run only about 21 mph, while quarterbacks routinely throw longer than 44 yards. 
+    }
+
 	
 \end{enumerate}
 \subsection*{Extensions}
