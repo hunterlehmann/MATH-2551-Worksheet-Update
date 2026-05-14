@@ -42,7 +42,17 @@
 
         The normal vector does not exist when $t=0$; as $t$ passes from negative to positive values the normal vector changes which side of the curve it is on.
     }
-    { %solution
+    {We first compute the unit tangent vector: 
+\begin{equation*}
+    \br'(t) = (1,t^2) \implies \|\br'(t)\| = \sqrt{1+t^4}\implies \bT(t) = \left(\frac{1}{\sqrt{1+t^4}},\frac{t^2}{\sqrt{1+t^4}}\right)
+\end{equation*}
+Now to compute $\bN(t)$, we could perform the usual procedure and compute the derivative of $\bT$. However, we would need to invoke some derivative rules and will end up messy. Instead, we can note that in $\R^2$, if $(x,y)$ is a unit vector, then the two unit vectors orthogonal to $(x,y)$ are $(-y,x)$ and $(y,-x)$ [the idea is that these are the only two unit vectors in the orthogonal complement to $\Span\{(x,y)\}$]. Therefore, the two choices for $\bN$ are
+\begin{equation*}
+    \bN(t) = 
+    \left(\frac{t^2}{\sqrt{1+t^4}},\frac{-1}{\sqrt{1+t^4}}\right) 
+    \textrm{ or } \left(\frac{-t^2}{\sqrt{1+t^4}},\frac{1}{\sqrt{1+t^4}}\right) 
+\end{equation*}
+To deduce which one to use, we recall that $\bN$ represents the \textit{principal} unit normal, meaning that it points \textit{in the direction} of the curve. By plugging in a few test points (eg., the ones suggested by the problem), one should find that whenever $t <0$, it should be the former, and when $t>0$, the latter [eg., when $t<0$, $\bN$ should have a positive $x$-component]. At $t=0$, the normal vector is not defined, because the arrows "flip" from "downward pointing" to "upward pointing" as $t$ varies. Perhaps a more rigorous way to say this is that no choice of $\bN(0)$ would extend to a smooth choice of normal vector in a neighborhood of the origin. 
     }
 \end{enumerate}
 
@@ -51,9 +61,15 @@
 \begin{enumerate}[resume]
 	\item \question{You are an engineer overseeing the construction of a certain bridge on campus. The blueprint shows that the bridge has a side view profile which looks like the parabola $y=x^2$. Unfortunately, the material that the bridge is supposed to be built with is extremely rigid, and can only support curves with $\kappa \leq 1.5$ units. Can this bridge be safely built with this material? [\textit{Hint: Where is the curvature the greatest?}]}
     {It cannot; the greatest curvature is \(\kappa =2\) units.}
-    {The point of greatest curvature occurs at $x=0$. Using the 
-parameterization $\br(t)=\langle t, t^2\rangle$ gives 
-$\kappa(t)=\dfrac{2}{(1+4t^2)^{3/2}}$, which is maximized when $t=0$.}
+    {Let us first find an expression for $\kappa$ of the plane curve $\br(t) = (t,t^2,0)$. Using the (more convenient) formula
+\begin{equation*}
+    \kappa(t) = \frac{\|\br'(t)\times \br''(t)\|}{\|\br'(t)\}^3}
+\end{equation*}
+and using that $\br'(t) =(1,2t,0)$ and $\br''(t)=(0,2,0)$, we obtain that
+\begin{equation*}
+    \kappa(t) = \frac{2}{(4t^2+1)^{3/2}}
+\end{equation*}
+To understand if the bridge can withhold this curvature, we need only know the maximal curvature over the bridge. Of course, one can apply the typical derivative test type procedure, but a diagram of the situation reveals that the curvature is maximised at the origin, that is when $t=0$. It thus follows that the maximal curvature is $\kappa(0)=2$, which is too much for the bridge to hold.}
 	
     \item \question{Imagine that you are an ant travelling along the space curve \begin{equation*}
         \br_1(t) = \left(\frac{3}{2}t^2+2t,4t-1,-3t^2+10t\right)

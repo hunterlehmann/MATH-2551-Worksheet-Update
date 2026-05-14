@@ -39,17 +39,40 @@
 \end{enumerate}
 \subsection*{Applications}
 \begin{enumerate}[resume]
-    \item A DNA molecule has the structure of a double helix (ie., two intertwined helices). Its radius is about 1 nanometre, and each loop of the helix rises about 3.4 nanometres. Supposing that a full molecule consists of $2.9 \times 10^8$ loops, compute the approximate length of a molecule of DNA. 
+    \item \question{A DNA molecule has the structure of a double helix (ie., two intertwined helices). Its radius is about 1 nanometre, and each loop of the helix rises about 3.4 nanometres. Supposing that a full molecule consists of $2.9 \times 10^8$ loops, compute the approximate length of a molecule of DNA. }
+    {% answer goes here
+
+    }
+    {Helices always have the form $\br(t) = (\cos t, \sin t, t)$, for $t\in [0,2\pi]$, however to fit this helix to our specifications, we need to involve some transformation factors. With units in nanometres (nm), the radius being unital implies there is no scaling term on the cosine and sine. Since the helix needs to rise 3.4 nm, the $z$-coordinate needs to be $t\mapsto \frac{3.4}{2\pi}t$. Since a strand of DNA consists of two identical interlaced helices, we have that, and a molecule of DNA is $2.8 \times 10^8$ copies of this loop, we have that 
+\begin{align*}
+\textrm{Length of DNA } &= 2\times 2.8\times 10^8 \times \int_0^{2\pi}\|\br'(t)\|dt \\
+&= 2\times 2.8\times 10^8 \times \int_0^{2\pi}\sqrt{1+\left(\frac{3.4}{2\pi}\right)^2}dt \\ 
+&=2 \times 2.8\times 10^8 \times 2\pi\sqrt{1+\left(\frac{3.4}{2\pi}\right)^2}\\
+&\approx 4\times 10^9 \textrm{ nm} = 4 \textrm{ m}
+\end{align*}
+We remark that the typical cited length of a molecule of DNA being 2 metres long comes from identifying the DNA as a double helix. Here, we've unraveled the double strands, hence why the length increased twofold. 
+    } 
 \end{enumerate}
 \subsection*{Extensions}
 \begin{enumerate}[resume]
 
 	
-	\item Find the point on the curve
+	\item \question{Find the point on the curve
 	\[
 	\br(t) = (5 \sin t)\bi+(5 \cos t)\bj+12t\bk
 	\]
-	at a distance $26\pi$ units along the curve from the point $(0,5,0)$ in the direction of increasing arc length.
+	at a distance $26\pi$ units along the curve from the point $(0,5,0)$ in the direction of increasing arc length.}
+    {% answer goes here
+
+    }
+    {% solution goes here
+    } 
+    \item \question{This problem is meant to generalize the previous one. Let $\br(t)$ be a smooth curve defined for $t\geq 0$. Suppose further that $|\br'(t)|\geq 0.01$ for all $t$. Show that if you are given a positive number $D$, you can find a (unique!) corresponding point $P$ on the curve, so that the distance from $\br(0)$ to $P$ along the curve equals $D$. Also, show that if we just assumed that $|\br'(t)| >0$ for all $t$, this statement is no longer true.}
+    {% answer goes here
+
+    }
+    {% solution goes here
+    } 
 
 	
 	.

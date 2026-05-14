@@ -12,7 +12,7 @@
     {% answer goes here
 
     }
-    {% solution goes here
+    {This is a helix spiraling both upwards and downwards with increasing radius. One way to see this is to note that the $x$ and $y$-components suggest circular motion, while the parameter $t$ controls the radius of the helix.
     } 
     \item \question{One important family of curves that appear repeatedly in this course are the \textit{graphs} of functions. For a function $y=f(x)$ in $\R^2$, find a parametrisation $\br(t)$ which traverses the curve from left to right.}
     {% answer goes here
@@ -32,7 +32,17 @@
     {% answer goes here
 
     }
-    {% solution goes here
+    {(i) The function is $f(x) = \frac{2}{9}x^2$. One way to see this is that $y(t) = \frac{2}{9}(x(t))^2$. This is one particular manifestation of how one can parametrise any function $y=f(x)$. \\\\
+(ii) We perform the routine calculation:
+\begin{align*}
+    \mathbf {v}(t) &= \frac{d}{dt}\left(e^t,\frac{2}{9}e^{2t}\right) = \left(e^t,\frac{4}{9}e^{2t}\right)\\
+    \mathbf {a}(t) &= \frac{d}{dt}\left(e^t,\frac{4}{9}e^{2t}\right) = \left(e^t,\frac{8}{9}e^{2t}\right)
+\end{align*}\\\\
+(iii) Plugging in $t = \ln 3$, 
+\begin{align*}
+    \mathbf {v}(\ln 3) &= \left(3,4\right)\\
+    \mathbf {a}(\ln 3) &=  \left(3,8\right)
+\end{align*}
     } 
     \item \question{Parametrise the tangent line to the space curve
 	\begin{equation*}
@@ -42,7 +52,11 @@
     {% answer goes here
 
     }
-    {% solution goes here
+    {To describe any line in $\R^3$ (or indeed in any dimension), it suffices to produce a direction vector $\mathbf{v}$ and initial point $\mathbf{x_0}$, and fit it into the equation of the line $\ell(t) = t\bv + \mathbf{x_0}$. For this problem, the direction vector will be $\br'(1)$ and the initial point will be $\br(1)$. By a routine computation, 
+\begin{equation*}
+    \br'(t) = \left(\frac{1}{t}, \frac{3}{(t+2)^2}, 1+\ln t\right) \implies \br'(1) = \left(1,\frac{1}{3},1\right)
+\end{equation*}
+and $\br(1) = (0,0,0)$ so the tangent line may be parametrised by $\ell(t) = (t,t/3,t)$.
     } 
 \end{enumerate}
 \subsection*{Applications}
@@ -52,14 +66,29 @@
 	If these two functions were the trajectories of two bumblebees on the same scale of time, would the bees collide? Explain.}{% answer goes here
 
     }
-    {% solution goes here
+    {To solve this, we will need to change the parameter of $\mathbf{f}$ to $s$. That is, $\mathbf{f}(s)=(s,s^2,s^3)$. We thus have the system of equations
+\begin{align*}
+    s &= \cos t\\
+    s^2 &= \cos 2t\\
+    s^3 &= t+1
+\end{align*}
+The first two equations imply that $\cos^2t = \cos 2t$. Using the identity $\cos(2t) = 2\cos^2t-1$, we see that $\cos^2t = 2\cos^2t -1 \iff \cos^2t =1 \iff \cos t = \pm 1$. Therefore $s = \pm 1$ and the third equation implies that $t = 0$ or $-2$. The latter is ruled out by considering the first equation (ie., $\-1 \neq \cos (-2)$). Therefore the only solution is $t=0$ and $s=1$, where both curves meet at the common point $(1,1,1)$. This also answers the bumblebee question - no they would not collide because while the curves intersect, they do not reach the point of intersection at the same time. In particular, when the $\mathbf{g}$-bee reaches $(1,1,1)$, the $\mathbf{f}$-bee is still one second behind.\\\\
+To compute the angle of intersection, we will need to know the tangent vectors at the point of intersection and consider their dot product. 
+\begin{align*}
+    \mathbf{f}'(s) = (1,2s,3s^2) &\implies \mathbf{f}'(1)=(1,2,3) \\ 
+    \mathbf{g}'(t) = (-\sin t, -2\sin 2t, 1) &\implies \mathbf{g}'(0)=(0,0,1)
+\end{align*}
+Finally, using a familiar dot product identity, we obtain 
+\begin{equation*}
+    \cos \theta = \frac{(1,2,3)\cdot(0,0,1)}{\|(1,2,3)\| \|(0,0,1)\|} = \frac{3}{\sqrt{15}}
+\end{equation*}
     }  
     \item \question{You are an interior decorator for the secret permanent residence of James Bond. His loft consists of a cylindrical room with walls given by $x^2+y^2=1$, with the first floor at $z= 0$ and second floor at $z=5$. You are to build a spiraling staircase from the point $(1,0,0)$ on the first floor to the point $(1,0,5)$ on the second floor. Being the international superspy he is, Mr. Bond wants to discourage any intruders from going upstairs, and hence requests the staircase wrap 10 full (anticlockwise) times around the room until it reaches the desired point on the second floor. Parametrise the staircase you must build. \\\\
     Also, compute the total length of the staircase \textit{[Hint: This will be easier to to next week, but you can still do this. Think about "unrolling" the walls of the cylinder.]}}
     {% answer goes here
 
     }
-    {% solution goes here
+    {The differences between the three curves lies in the possible values the curves attains. Indeed, the structure of each curve looks like $(t,t,t^2)$, but note that $\mathbf{g}$ can never have negative components, whereas $\mathbf{h}$ can never have components outside of the range $[-1,1]$. However, these restrictions are irrelevant when $t\in [0,\pi]$ so indeed in that domain, all three curves are identical. 
     } 
     
 \end{enumerate}
@@ -75,7 +104,10 @@
     {% answer goes here
 
     }
-    {% solution goes here
+    {A general way to these sorts of problems is to first identify the possible $(x,y)$-values that the curve of intersection can take, and then use either of the given equations to deduce the $z$-coordinate. In our case, we observe that the curve of intersection projects onto the circle $x^2+y^2=9$. This is parametrized by the function $\br(t) = (3\cos t, 3\sin t, 0)$. To deduce the $z$-component of the intersection, we use the second equation: $y+z = 2 \iff z = 2-y = 2-3\sin t$. We conclude that the curve of intersection may be given by
+\begin{equation*}
+    \br(t) = (3\cos t, 3\sin t, 2-3\sin t)
+\end{equation*}
     } 
 	
 	\item \question{Let $\br(t)$ from $a\leq t \leq b$ be a parametrisation of a space curve. Observe that implicit in the equation is an associated direction; the curve goes \textit{from} $\br(a)$ \textit{to} $\br(b)$. One may instead wish for their curve to go the other way: \textit{from} $\br(b)$ \textit{to} $\br(a)$. So given a parametric curve $\br(t)$, find a related paramterisation (along with time bounds) that traverses the same path, but backwards. Use this to find a parametrisation of the unit circle in $\R^2$, oriented clockwise} 
